@@ -9,10 +9,18 @@ export default function Sidebar() {
       </div>
       <div className=" bg-[#1c1b23] rounded-md h-5/6">
         <ul className="text-[#737086] text-sm">
-          <li className="py-3 pl-5 cursor-pointer">Home</li>
-          <li className="py-3 pl-5 cursor-pointer">About</li>
-          <li className="py-3 pl-5 cursor-pointer">Skills</li>
-          <li className="py-3 pl-5 cursor-pointer">Projets</li>
+          <li className="py-3 pl-5 cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+            <i className="pi pi-home text-xl"></i> Home
+          </li>
+          <li className="py-3 pl-5 cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+            About
+          </li>
+          <li className="py-3 pl-5 cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+            <i className="pi pi-fire  text-xl"></i> Skills
+          </li>
+          <li className="py-3 pl-5 cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+            <i className="pi pi-code  text-xl"></i> Projets
+          </li>
         </ul>
       </div>
     </aside>
