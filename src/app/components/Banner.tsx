@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Banner() {
   return (
-    <section className="bg-[url('/bg.jpeg')] w-[95%] mx-auto bg-no-repeat bg-blur my-14 ">
+    <section className="bg-[url('/bg.jpeg')] w-[95%] mx-auto bg-no-repeat bg-blur my-14 rounded-md">
       <div
         className="flex justify-between items-center py-5 w-full px-10"
         style={{ backdropFilter: "blur(10px)" }}

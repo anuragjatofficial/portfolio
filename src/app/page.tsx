@@ -8,7 +8,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center h-screen justify-between bg-[#14131a]">
       <div className="flex w-full h-full  gap-10">
         <Sidebar />
-        <div className="w-4/5 overflow-y-auto">
+        <div className="w-4/5">
           <Banner />
           <Projects/>
         </div>

@@ -77,11 +77,11 @@ export default function Projects() {
     ]; 
 
   return (
-    <section className="w-full">
-      <div className="w-[95%] mx-auto">
+    <section className="w-full overflow-auto h-[calc(100vh-350px)]">
+      <div className="pl-7 z-10 w-[95%] mx-auto   bg-[#14131a]">
         <h1 className="text-white font-semibold">Projects</h1>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 box-border rounded-md gap-5 w-[95%] mx-auto py-8 sm:grid-cols-1">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 box-border rounded-md gap-5 w-[95%] mx-auto py-8 sm:grid-cols-1 overflow-auto">
         {projects.map((e, i) => (
           <div
             className="rounded-md border-b-4  overflow-hidden border-[#2bd576] flex flex-col transition-transform transform-gpu text-zinc-800"
@@ -92,9 +92,10 @@ export default function Projects() {
                 className="rounded-t-md object-cover"
                 src={e.image}
                 alt={e.desc}
-                width={80}
-                height={80}
-                layout="responsive"
+                width={480}
+                height={360}
+                // layout="responsive"
+                style={{objectFit:'cover',width:'100%',height:'auto'}}
               />
               <Link href={e.deployed} target="_blank">
                 <button
@@ -106,7 +107,7 @@ export default function Projects() {
                     style={{
                       fontSize: "2rem",
                       color: "black",
-                      boxShadow: "0 0 8px 0 #2bd576;",
+                      boxShadow: "0 0 8px 0 #2bd576",
                       borderColor: "#2bd576",
                       // border: "0.1px solid #2bd576",
                     }}
@@ -123,7 +124,7 @@ export default function Projects() {
                     style={{
                       fontSize: "2rem",
                       color: "black",
-                      boxShadow: "0 0 8px 0 #2bd576;",
+                      boxShadow: '0 0 8px 0 #2bd576',
                       borderColor: "#2bd576",
                       // border: "2px solid #2bd576",
                     }}
