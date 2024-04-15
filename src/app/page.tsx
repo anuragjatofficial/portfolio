@@ -1,10 +1,11 @@
 import "primeicons/primeicons.css";
 import Home from "./pages/Home";
+import About from "./pages/About";
 
 export default function Page() {
   return (
     <main className="font-josefin_sans">
-      <header className="bg-[#31333b] flex justify-between py-5 items-center px-5 z-20">
+      <header className="bg-[#31333b] flex justify-between py-5 items-center px-5 z-20 sticky top-0">
         <div className="text-active font-medium text-2xl">
           {"<"}Anurag{"/>"}
         </div>
@@ -26,9 +27,8 @@ export default function Page() {
           </div>
         </div>
       </header>
-      <section className="bg-[#31333b] h-screen">
       <Home/>
-      </section>
+      <About/>
     </main>
   );
 }
