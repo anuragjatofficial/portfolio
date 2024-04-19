@@ -6,7 +6,7 @@ export default function Home() {
       id="home"
       className="font-sans flex justify-between xl:flex-row sm:flex-col-reverse md:flex-col-reverse items-center h-[calc(100vh)] bg-[#31333b]  max-w-[1700px] mx-auto"
     >
-      <div>
+      <div className="ml-auto">
         <div>
           <h1 className="text-4xl font-normal text-gray-50 py-3">
             I'M
@@ -40,7 +40,7 @@ export default function Home() {
           className="md:pt-32 sm:pt-16  mix-blend-overlay drop-shadow-[0_0_1.5rem_#2bd576] md:w-[500px] sm:w-[400px] "
         />
       </div>
-      <div className="sticky right-[150px] bottom-[100px] flex flex-col-reverse items-center gap-7">
+      <div className="absolute right-[100px] bottom-[100px] flex flex-col-reverse items-center gap-7">
         <ul className="flex flex-col gap-5 text-gray-400">
           <li>
             <i className="pi pi-linkedin text-4xl cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></i>
