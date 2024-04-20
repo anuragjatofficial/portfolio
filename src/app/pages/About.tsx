@@ -1,14 +1,24 @@
 import Image from "next/image";
 import React from "react";
 
-interface techStack {
+interface TechStack {
   name: string;
   imagePath: string;
 }
 export default function About() {
-
-  const techStacks: techStack[] = [
-    {name:'Java',imagePath:'/'}
+  const techStacks: TechStack[] = [
+    { name: "Java", imagePath: "/images/java.svg" },
+    { name: "Spring Boot", imagePath: "/images/springBoot.svg" },
+    { name: "Hibernate", imagePath: "/images/Hibernate.svg" },
+    { name: "Rest API's", imagePath: "/images/resApi.svg" },
+    { name: "HTML 5", imagePath: "/images/Html.svg" },
+    { name: "CSS 3", imagePath: "/images/css.svg" },
+    { name: "JavaScript", imagePath: "/images/js.svg" },
+    { name: "MySQL", imagePath: "/images/MySql.svg" },
+    { name: "Github", imagePath: "/images/MySql.svg" },
+    { name: "JSON", imagePath: "https://img.icons8.com/glyph-neue/64/json.png" },
+    { name: "Git", imagePath: "/images/git.svg" },
+    { name: "Postman", imagePath: "/images/postman.svg" },
   ];
 
   return (
@@ -36,12 +46,22 @@ export default function About() {
         <h2 className="text-5xl font-semibold font-libre_serif text-active pt-10 text-center  ">
           My Skills
         </h2>
-        <div className="grid">
-          {techStacks.map((stack) => (
-            <div>
-              <img src={stack.imagePath} alt={stack.name} />
-              <Image src={stack.imagePath} width={200} height={200}></Image>
-              <p>{stack.name}</p>
+        <div className="grid grid-cols-4 pt-10 gap-8">
+          {techStacks.map((stack: TechStack, index: number) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-between rounded-xl shadow-md bg-[#3d3e42] w-fit px-[28px] py-4 hover:-translate-x-1 hover:-translate-y-1 transition-all transform delay-500 duration-300 ease-in-out cursor-pointer hover:bg-active "
+            >
+              {/* <img src={stack.imagePath} alt={stack.name} /> */}
+
+              <Image
+                src={stack.imagePath}
+                width={200}
+                height={200}
+                alt={stack.name}
+                className="w-36"
+              />
+              <p className="text-xl text-gray-50">{stack.name}</p>
             </div>
           ))}
         </div>
