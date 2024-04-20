@@ -7,8 +7,6 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    
-    
     extend: {
       colors:{
         active:'#2bd576'
@@ -17,6 +15,10 @@ const config: Config = {
         josefin_sans: ["Josefin Sans", "sans-serif"],
         libre_serif: ["Libre Baskerville", 'serif']
       },
+      screens:{
+        xs:'600px',
+        '2xs':'0px',
+      }
     },
   },
   plugins: [],

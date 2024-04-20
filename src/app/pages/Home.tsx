@@ -4,9 +4,9 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="font-sans flex justify-between xl:flex-row sm:flex-col-reverse md:flex-col-reverse items-center h-[calc(100vh)] bg-[#31333b]  max-w-[1700px] mx-auto"
+      className="font-sans flex justify-between xl:flex-row sm:flex-col-reverse md:flex-col-reverse items-center h-[calc(100vh)] bg-[#3d3e42]   max-w-[1700px] mx-auto"
     >
-      <div className="ml-auto">
+      <div className="xl:ml-auto xs:ml-0">
         <div>
           <h1 className="text-4xl font-normal text-gray-50 py-3">
             I'M
@@ -37,7 +37,7 @@ export default function Home() {
             maskImage:
               "linear-gradient(180deg,rgb(255, 255, 255), rgb(0, 0, 0,0.30), transparent)",
           }}
-          className="md:pt-32 sm:pt-16  mix-blend-overlay drop-shadow-[0_0_1.5rem_#2bd576] md:w-[500px] sm:w-[400px] "
+          className="md:pt-32 sm:pt-16 2xl:pt-0  lg:pt-0  mix-blend-overlay drop-shadow-[0_0_1.5rem_#2bd576] md:w-[500px] sm:w-[400px] "
         />
       </div>
       <div className="absolute right-[100px] bottom-[100px] flex flex-col-reverse items-center gap-7">

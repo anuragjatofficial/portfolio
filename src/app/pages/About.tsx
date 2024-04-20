@@ -15,16 +15,16 @@ export default function About() {
     { name: "CSS 3", imagePath: "/images/css.svg" },
     { name: "JavaScript", imagePath: "/images/js.svg" },
     { name: "MySQL", imagePath: "/images/MySql.svg" },
-    { name: "Github", imagePath: "/images/MySql.svg" },
-    { name: "JSON", imagePath: "https://img.icons8.com/glyph-neue/64/json.png" },
+    { name: "Github", imagePath: "/images/github.svg" },
     { name: "Git", imagePath: "/images/git.svg" },
     { name: "Postman", imagePath: "/images/postman.svg" },
+    { name: "Linux", imagePath: "/images/linux.svg" },
   ];
 
   return (
     <section
       id="about"
-      className="bg-[#31333b] h-screen max-w-[1700px] mx-auto px-24"
+      className="bg-[#31333b]  max-w-[1700px] mx-auto px-24"
     >
       <div>
         <h2 className="text-5xl font-semibold font-libre_serif text-active pt-10">
@@ -46,24 +46,52 @@ export default function About() {
         <h2 className="text-5xl font-semibold font-libre_serif text-active pt-10 text-center  ">
           My Skills
         </h2>
-        <div className="grid grid-cols-4 pt-10 gap-8">
+        <div className="sm:grid md:grid lg:grid xl:grid pt-10 gap-8 max-w-[926px] mx-auto sm:grid-cols-2 md:grid-cols-3 xs:grid-cols-2 2xs:flex 2xs:flex-col 2xs:items-center text-center">
           {techStacks.map((stack: TechStack, index: number) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-between rounded-xl shadow-md bg-[#3d3e42] w-fit px-[28px] py-4 hover:-translate-x-1 hover:-translate-y-1 transition-all transform delay-500 duration-300 ease-in-out cursor-pointer hover:bg-active "
+              className="flex flex-col items-center group justify-between rounded-xl shadow-md bg-[#3d3e42] w-fit px-[28px] py-4 hover:-translate-x-1 hover:-translate-y-1 transition-all transform delay-500 duration-300 ease-in-out cursor-pointer "
             >
               {/* <img src={stack.imagePath} alt={stack.name} /> */}
 
+              <div className="w-36 h-36">
               <Image
                 src={stack.imagePath}
                 width={200}
                 height={200}
                 alt={stack.name}
-                className="w-36"
+                className="w-36 object-cover"
               />
+              </div>
               <p className="text-xl text-gray-50">{stack.name}</p>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="gap-10 flex-col flex ml-auto">
+        <div className="flex gap-10 items-center justify-end">
+          <div className="rounded-full w-3 h-3 bg-active"></div>
+          <div className="rounded-full w-4 h-4 bg-active"></div>
+          <div className="rounded-full w-4 h-4 bg-active"></div>
+          <div className="rounded-full w-3 h-3 bg-active"></div>
+        </div>
+        <div className="flex gap-10 items-center justify-end" >
+          <div className="rounded-full w-4 h-4 bg-active"></div>
+          <div className="rounded-full w-3 h-3 bg-active"></div>
+          <div className="rounded-full w-3 h-3 bg-active"></div>
+          <div className="rounded-full w-4 h-4 bg-active"></div>
+        </div>
+        <div className="flex gap-10 items-center justify-end">
+          <div className="rounded-full w-3 h-3 bg-active"></div>
+          <div className="rounded-full w-4 h-4 bg-active"></div>
+          <div className="rounded-full w-4 h-4 bg-active"></div>
+          <div className="rounded-full w-3 h-3 bg-active"></div>
+        </div>
+        <div className="flex gap-10 items-center justify-end">
+          <div className="rounded-full w-4 h-4 bg-active"></div>
+          <div className="rounded-full w-3 h-3 bg-active"></div>
+          <div className="rounded-full w-3 h-3 bg-active"></div>
+          <div className="rounded-full w-4 h-4 bg-active"></div>
         </div>
       </div>
     </section>
