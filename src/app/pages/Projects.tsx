@@ -7,7 +7,7 @@ export default function Projects() {
     {
       name: "Covisafe+ : Your Trusted COVID Vaccine Companion",
       desc: "Covisafe+ offers real-time information, risk assessment, vaccination booking, and community support to combat the pandemic effectively.",
-      image: "/covisafe-plus.png",
+      image: "/images/covisafe-plus.png",
       tech: [
         "Java",
         "Spring Boot",
@@ -22,7 +22,7 @@ export default function Projects() {
     {
       name: "CodePulse : Amplifying Your Coding Potential",
       desc: "An AI interview platform to practice with AI-driven simulations tailored to your skills and industry. Get instant feedback and performance insights to refine your approach.",
-      image: "/codepulse.png",
+      image: "/images/codepulse.png",
       tech: [
         "Java",
         "Spring Boot",
@@ -40,7 +40,7 @@ export default function Projects() {
     {
       name: "Lenskart clone",
       desc: "Lenskart is the leading e-commerce portal for eyewear in India.",
-      image: "/lensmart-1.png",
+      image: "/images/lensmart-1.png",
       tech: ["HTML", "CSS", "JavaScript", "JSON-Server"],
       deployed: "https://anuragjatofficial.github.io/lensmart",
       github: "https://github.com/anuragjatofficial/lensmart",
@@ -48,7 +48,7 @@ export default function Projects() {
     {
       name: "Amazon clone",
       desc: "Amazon is the world's leading e-commerce platform for convenient and affordable shopping",
-      image: "/amazekart-1.png",
+      image: "/images/amazekart-1.png",
       tech: ["HTML", "CSS", "JavaScript"],
       deployed: "https://anuragjatofficial.github.io/amazekart/",
       github: "https://github.com/anuragjatofficial/amazekart",
@@ -56,7 +56,7 @@ export default function Projects() {
     {
       name: "Suraksha Mitra : The Crime ManageMent System",
       desc: "The main objective of this system is to maintain and manage detailed information on the crime that happened in an area under a particular police station.",
-      image: "/crime_mgmt-1.png",
+      image: "/images/crime_mgmt-1.png",
       tech: ["Java"],
       deployed:
         "https://drive.google.com/file/d/1soD3yssxbYjdNQ60an8ctpvfo3qMdvWR/view",
@@ -65,7 +65,7 @@ export default function Projects() {
     {
       name: "eXcelerate: Accelerating Learning through Online Platforms",
       desc: "eXcelerate is a robust software solution that empowers remote education and training. This platform is specifically designed to equip educators with powerful tools for creating and delivering online courses",
-      image: "/excelerate1.png",
+      image: "/images/excelerate1.png",
       tech: ["Java", "MySQL", "Hibernate"],
       deployed:
         "https://drive.google.com/file/d/10npOdmOa27-mL__n7wuaFJflw5aW3nGy/view",
