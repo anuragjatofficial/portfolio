@@ -1,21 +1,27 @@
-import Image from 'next/image'
-import Sidebar from './components/Sidebar'
-import Banner from './components/Banner'
-import Projects from './components/Projects';
+import "primeicons/primeicons.css";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Header from "./components/Header";
+import Projects from "./pages/Projects";
+import Experience from "./pages/Experience";
+import Github from "./pages/Github";
+import Contact from "./pages/Contact";
+import Footer from "./pages/Footer";
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center h-screen justify-between bg-[#14131a]">
-      <div className="flex w-full h-full  gap-10">
-        <Sidebar />
-        <div className="w-4/5">
-          <Banner />
-          <Projects/>
-        </div>
-      </div>
+    <main className="font-josefin_sans bg-[#3d3e42]">
+      <Header/>
+      <Home/>
+      <About/>
+      <Projects/>
+      <Experience/>
+      <Github/>
+      <Contact/>
+      <Footer/>
     </main>
   );
 }
-Home.serialize = {
+Page.serialize = {
   client: true,
 };
