@@ -22,10 +22,10 @@ export default function About() {
   ];
 
   return (
-    <section className="bg-[#31333b] " id="about">
-      <div className="bg-[#31333b]  max-w-[1700px] mx-auto px-24">
-        <div>
-          <h2 className="text-5xl font-semibold font-libre_serif text-active pt-10 max-sm:text-3xl">
+    <section className="bg-[#31333b] min-h-screen" id="about"  >
+      <div className="bg-[#31333b]  min-h-full h-fit max-w-[1700px] mx-auto px-24">
+        <div className="pt-[80px]">
+          <h2 className="text-5xl font-semibold font-libre_serif text-gray-50 pt-10 max-sm:text-3xl ">
             About
           </h2>
           <div className="flex gap-3 my-10">
@@ -41,7 +41,7 @@ export default function About() {
           </div>
         </div>
         <div>
-          <h2 className="text-5xl font-semibold font-libre_serif text-active pt-10 text-center  max-sm:text-3xl">
+          <h2 className="text-5xl font-semibold font-libre_serif text-gray-50  pt-10 text-center  max-sm:text-3xl">
             My Skills
           </h2>
           <div className="sm:grid md:grid lg:grid xl:grid pt-10 gap-8 max-w-[926px] mx-auto sm:grid-cols-2 md:grid-cols-3 xs:grid-cols-2 2xs:flex 2xs:flex-col 2xs:items-center text-center">
@@ -68,7 +68,7 @@ export default function About() {
             ))}
           </div>
         </div>
-        <div className="gap-10 flex-col flex ml-auto mt-10 max-sm:gap-8">
+        <div className="gap-10 flex-col flex ml-auto py-10 max-sm:gap-8 ">
           <div className="flex gap-10 items-center justify-end max-sm:gap-8">
             <div className="rounded-full w-3 h-3 bg-active max-sm:w-1 max-sm:h-1"></div>
             <div className="rounded-full w-4 h-4 bg-active max-sm:w-2 max-sm:h-2"></div>
