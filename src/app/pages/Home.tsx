@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <div className="h-full xl:w-[50%] md:w-[50%] ">
           <Image
-            src="/image.png"
+            src="/images/image.png"
             alt=""
             width={1940}
             height={1080}
