@@ -1,4 +1,4 @@
-import React from "react";
+55555import React from "react";
 
 export default function Header() {
   return (
@@ -23,7 +23,9 @@ export default function Header() {
           <li className="hover:text-gray-50 cursor-pointer">
             <a href="#github">Github</a>
           </li>
-          <li className="hover:text-gray-50 cursor-pointer"><a href="#contact">Contact</a></li>
+          <li className="hover:text-gray-50 cursor-pointer">
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
       <div className="">

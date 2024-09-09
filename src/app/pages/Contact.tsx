@@ -1,4 +1,5 @@
 import React from "react";
+import { intrests } from "../../../info.json";
 
 export default function Contact() {
   return (
@@ -11,21 +12,14 @@ export default function Contact() {
           </h2>
           <p className="text-lg py-5 text-gray-50">I am interested in ...</p>
           <div className="flex flex-wrap gap-3">
-            <div className="px-2 py-1 rounded-md text-gray-50 bg-[#3d3e42]">
-              Backend Development
-            </div>
-            <div className="px-2 py-1 rounded-md text-gray-50 bg-[#3d3e42]">
-              Frontend Development
-            </div>
-            <div className="px-2 py-1 rounded-md text-gray-50 bg-[#3d3e42]">
-              Devops
-            </div>
-            <div className="px-2 py-1 rounded-md text-gray-50 bg-[#3d3e42]">
-              Cloud
-            </div>
-            <div className="px-2 py-1 rounded-md text-gray-50 bg-[#3d3e42]">
-              Website Development
-            </div>
+            {intrests.map((e, index) => (
+              <div
+                className="px-2 py-1 rounded-md text-gray-50 bg-[#3d3e42]"
+                key={index}
+              >
+                {e}
+              </div>
+            ))}
           </div>
         </div>
 
@@ -78,7 +72,6 @@ export default function Contact() {
           </form>
         </div>
       </div>
-      
     </section>
   );
 }

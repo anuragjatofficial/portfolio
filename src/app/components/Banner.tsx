@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 export default function Banner() {
   return (
@@ -29,9 +29,7 @@ export default function Banner() {
         <Link href="https://instagram.com/anuragjatofficial" target="_blank">
           <button className=" bg-[#14131a] text-[#8b8a91] px-3 py-2 flex items-center justify-center gap-2 rounded-md text-sm">
             <div>Follow on instagram</div>
-            <i
-              className="pi pi-instagram"
-            ></i>
+            <i className="pi pi-instagram"></i>
           </button>
         </Link>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { github } from "../../../info.json";
 
 export default function Github() {
   return (
@@ -11,7 +12,7 @@ export default function Github() {
           <div className="flex w-fit flex-col gap-12">
             <div className="w-full flex ">
               <img
-                src="https://ssr-contributions-svg.vercel.app/_/anuragjatofficial?format=svg&weeks=50&theme=native&widget_size=medium"
+                src={`https://ssr-contributions-svg.vercel.app/_/${github}?format=svg&weeks=50&theme=native&widget_size=medium`}
                 alt="github stats"
                 className="w-full"
               />
@@ -19,19 +20,19 @@ export default function Github() {
             <div className="flex w-fit gap-5  justify-between items-center">
               <div className="drop-shadow-[0px_0px_5px_#2bd576]">
                 <img
-                  src="https://github-readme-streak-stats.herokuapp.com/?user=anuragjatofficial&theme=dark&theme=default_repocard&title_color=%27#ffff'"
+                  src={`https://github-readme-streak-stats.herokuapp.com/?user=${github}&theme=dark&theme=default_repocard&title_color=%27#ffff'`}
                   alt=""
                 />
               </div>
               <div className="drop-shadow-[0px_0px_5px_#2bd576]">
                 <img
-                  src="https://github-readme-stats.vercel.app/api/top-langs?username=anuragjatofficial&show_icons=true&locale=en&layout=compact"
+                  src={`https://github-readme-stats.vercel.app/api/top-langs?username=${github}&show_icons=true&locale=en&layout=compact`}
                   alt=""
                 />
               </div>
               <div className="drop-shadow-[0px_0px_5px_#2bd576]">
                 <img
-                  src="https://github-readme-stats.vercel.app/api?username=anuragjatofficial&show_icons=true&default_repocard"
+                  src={`https://github-readme-stats.vercel.app/api?username=${github}&show_icons=true&default_repocard`}
                   alt=""
                 />
               </div>

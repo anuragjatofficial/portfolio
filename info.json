@@ -1,0 +1,106 @@
+{
+  "name": "Anurag Choudhary",
+  "jobTitles": ["Full Stack Web Developer", "Devops"],
+  "linkedIn": "anurag-choudhary-7a0874258/",
+  "twitter": "genzprogrammer",
+  "github": "anuragjatofficial",
+  "whatsApp": "https://wa.me/+917291971753",
+  "about": "Dynamic Java backend developer adept in Java, Spring, and Hibernate to craft top-tier server-side applications. Demonstrates exceptional problem-solving and teamwork skills. Proficient in leveraging emerging technologies, harnessing Generative AI, and swiftly adapting to new tech stacks to enhance software solutions.",
+  "techStacks": [
+    { "name": "Java", "imagePath": "/images/java.svg" },
+    { "name": "Spring Boot", "imagePath": "/images/springBoot.svg" },
+    { "name": "Hibernate", "imagePath": "/images/Hibernate.svg" },
+    { "name": "Rest API's", "imagePath": "/images/resApi.svg" },
+    { "name": "HTML 5", "imagePath": "/images/Html.svg" },
+    { "name": "CSS 3", "imagePath": "/images/css.svg" },
+    { "name": "JavaScript", "imagePath": "/images/js.svg" },
+    { "name": "MySQL", "imagePath": "/images/MySql.svg" },
+    { "name": "Github", "imagePath": "/images/github.svg" },
+    { "name": "Git", "imagePath": "/images/git.svg" },
+    { "name": "Postman", "imagePath": "/images/postman.svg" },
+    { "name": "Linux", "imagePath": "/images/linux.svg" }
+  ],
+  "projects": [
+    {
+      "name": "Covisafe+ : Your Trusted COVID Vaccine Companion",
+      "desc": "Covisafe+ offers real-time information, risk assessment, vaccination booking, and community support to combat the pandemic effectively.",
+      "image": "/images/covisafe-plus.png",
+      "tech": [
+        "Java",
+        "Spring Boot",
+        "Maven",
+        "PostgreSQL",
+        "React js",
+        "Tailwind CSS"
+      ],
+      "deployed": "https://covisafe-plus.vercel.app/",
+      "github": "https://github.com/anuragjatofficial/covisafe-plus"
+    },
+    {
+      "name": "CodePulse : Amplifying Your Coding Potential",
+      "desc": "An AI interview platform to practice with AI-driven simulations tailored to your skills and industry. Get instant feedback and performance insights to refine your approach.",
+      "image": "/images/codepulse.png",
+      "tech": [
+        "Java",
+        "Spring Boot",
+        "Sprnig Data JPA",
+        "Maven",
+        "PostgreSQL",
+        "OpenAI API",
+        "React",
+        "TypeScript",
+        "CSS"
+      ],
+      "deployed": "https://code-pulse-ai.vercel.app/",
+      "github": "https://github.com/anuragjatofficial/code-pulse"
+    },
+    {
+      "name": "Lenskart clone",
+      "desc": "Lenskart is the leading e-commerce portal for eyewear in India.",
+      "image": "/images/lensmart-1.png",
+      "tech": ["HTML", "CSS", "JavaScript", "JSON-Server"],
+      "deployed": "https://anuragjatofficial.github.io/lensmart",
+      "github": "https://github.com/anuragjatofficial/lensmart"
+    },
+    {
+      "name": "Amazon clone",
+      "desc": "Amazon is the world's leading e-commerce platform for convenient and affordable shopping",
+      "image": "/images/amazekart-1.png",
+      "tech": ["HTML", "CSS", "JavaScript"],
+      "deployed": "https://anuragjatofficial.github.io/amazekart/",
+      "github": "https://github.com/anuragjatofficial/amazekart"
+    },
+    {
+      "name": "Suraksha Mitra : The Crime ManageMent System",
+      "desc": "The main objective of this system is to maintain and manage detailed information on the crime that happened in an area under a particular police station.",
+      "image": "/images/crime_mgmt-1.png",
+      "tech": ["Java"],
+      "deployed": "https://drive.google.com/file/d/1soD3yssxbYjdNQ60an8ctpvfo3qMdvWR/view",
+      "github": "https://github.com/anuragjatofficial/suraksha-mitra"
+    },
+    {
+      "name": "eXcelerate: Accelerating Learning through Online Platforms",
+      "desc": "eXcelerate is a robust software solution that empowers remote education and training. This platform is specifically designed to equip educators with powerful tools for creating and delivering online courses",
+      "image": "/images/excelerate1.png",
+      "tech": ["Java", "MySQL", "Hibernate"],
+      "deployed": "https://drive.google.com/file/d/10npOdmOa27-mL__n7wuaFJflw5aW3nGy/view",
+      "github": "https://github.com/anuragjatofficial/excelerate"
+    }
+  ],
+  "experience": [
+    {
+      "designation": "Associate Software Engineer",
+      "companyName": "BPK Technologies",
+      "city": "Lucknow",
+      "joinedDate": "15/01/2024",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quibusdam, reprehenderit id porro eum sunt quia consectetur modi, aliquam, perferendis tempora. Expedita a vero optio, dicta pariatur in! Dicta deserunt, cumque quas labore eius, ut iste architecto, nisi officiis illo voluptatem quod in doloremque? Incidunt fugit ex voluptatum cum accusantium ipsa doloribus sint rerum eos reiciendis libero aspernatur, quibusdam, amet odio expedita laudantium nesciunt eligendi, dolorum deleniti! Ut cupiditate, commodi delectus officia, nobis neque temporibus reprehenderit sequi, alias eos aut cum voluptate vero rerum similique ratione! Excepturi, adipisci. Ut qui quam voluptatibus neque. Atque modi quod exercitationem natus voluptates incidunt ab, reiciendis fugit sapiente! Quasi iure voluptas dolore consequuntur odit maiores animi. Voluptate at sint ipsa repudiandae quam ut nobis molestiae facere eius libero obcaecati impedit maxime numquam sapiente harum labore eligendi magnam aliquam architecto odio, repellendus veniam quos sequi! Officia, exercitationem. Illo autem aspernatur nisi minima commodi doloremque veritatis vitae praesentium magni. Necessitatibus dolorum, rem voluptatibus optio ad enim sint dolore, officia corporis rerum nobis, is accusantium velit accusamus dolorum quia amet nobis!"
+    }
+  ],
+  "intrests": [
+    "Backend Development",
+    "Frontend Development",
+    "Devops",
+    "Cloud",
+    "Custom Software"
+  ]
+}

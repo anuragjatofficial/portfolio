@@ -11,14 +11,14 @@ import Footer from "./pages/Footer";
 export default function Page() {
   return (
     <main className="font-josefin_sans bg-[#3d3e42]">
-      <Header/>
-      <Home/>
-      <About/>
-      <Projects/>
-      <Experience/>
-      <Github/>
-      <Contact/>
-      <Footer/>
+      <Header />
+      <Home />
+      <About />
+      <Projects />
+      <Experience />
+      <Github />
+      <Contact />
+      <Footer />
     </main>
   );
 }

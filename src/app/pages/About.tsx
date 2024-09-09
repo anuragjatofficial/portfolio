@@ -1,28 +1,14 @@
 import Image from "next/image";
 import React from "react";
+import { techStacks, about } from "../../../info.json";
 
 interface TechStack {
   name: string;
   imagePath: string;
 }
 export default function About() {
-  const techStacks: TechStack[] = [
-    { name: "Java", imagePath: "/images/java.svg" },
-    { name: "Spring Boot", imagePath: "/images/springBoot.svg" },
-    { name: "Hibernate", imagePath: "/images/Hibernate.svg" },
-    { name: "Rest API's", imagePath: "/images/resApi.svg" },
-    { name: "HTML 5", imagePath: "/images/Html.svg" },
-    { name: "CSS 3", imagePath: "/images/css.svg" },
-    { name: "JavaScript", imagePath: "/images/js.svg" },
-    { name: "MySQL", imagePath: "/images/MySql.svg" },
-    { name: "Github", imagePath: "/images/github.svg" },
-    { name: "Git", imagePath: "/images/git.svg" },
-    { name: "Postman", imagePath: "/images/postman.svg" },
-    { name: "Linux", imagePath: "/images/linux.svg" },
-  ];
-
   return (
-    <section className="bg-[#31333b] min-h-screen" id="about"  >
+    <section className="bg-[#31333b] min-h-screen" id="about">
       <div className="bg-[#31333b]  min-h-full h-fit max-w-[1700px] mx-auto px-24">
         <div className="pt-[80px]">
           <h2 className="text-5xl font-semibold font-libre_serif text-gray-50 pt-10 max-sm:text-3xl ">
@@ -31,13 +17,7 @@ export default function About() {
           <div className="flex gap-3 my-10">
             <div className="h-1 mt-2  w-[150px]  rounded-full bg-active  cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></div>
 
-            <p className="text-gray-50 text-xl max-sm:text-base ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-              magnam sint odio ex! Error earum maxime temporibus expedita
-              voluptas fugiat nesciunt ipsum iure, alias assumenda suscipit
-              architecto officia veniam dolorum a voluptate! Facere molestias
-              esse tempore ullam accusantium maxime?
-            </p>
+            <p className="text-gray-50 text-xl max-sm:text-base ">{about}</p>
           </div>
         </div>
         <div>

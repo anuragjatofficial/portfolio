@@ -20,3 +20,7 @@
 *{
   box-sizing: border-box;
 }
+::selection{
+  color: #2bd576;
+  background-color: whitesmoke;
+}
