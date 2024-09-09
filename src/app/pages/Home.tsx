@@ -34,28 +34,27 @@ export default function Home() {
               maskImage:
                 "linear-gradient(180deg,rgb(255, 255, 255), rgb(0, 0, 0,0.30), transparent)",
             }}
-            className="md:pt-32 sm:pt-16 lg:pt-44 xl:pt-0 2xl:pt-0  mix-blend-overlay drop-shadow-[0_0_1.5rem_#2bd576] md:w-[500px] sm:w-[400px] xs:w-[400px] 2xs:w-[400px] lg:w-[800px] xl:w-[800px] 2xl:[800px]"
+            className="md:pt-32 sm:pt-16 lg:pt-44 xl:pt-0 2xl:pt-0  grayscale mix-blend-overlay drop-shadow-active_shadow md:w-[500px] sm:w-[400px] xs:w-[400px] 2xs:w-[400px] lg:w-[800px] xl:w[800px] 2xl:[800px]"
           />
         </div>
-        
       </div>
       <div className="absolute  right-10 bottom-10 flex flex-col-reverse items-center gap-7 sm:right-5 sm:bottom-5 lg:right-[100px] lg:bottom-[100px]">
-          <ul className="flex flex-col gap-5 text-gray-400">
-            <li>
-              <i className="pi pi-linkedin text-4xl cursor-pointer hover:text-blue-600 focus:text-blue-600 transition-colors ease-in-out duration-1000"></i>
-            </li>
-            <li>
-              <i className="pi pi-twitter text-4xl cursor-pointer hover:text-blue-500 focus:text-blue-500 transition-colors ease-in-out duration-1000"></i>
-            </li>
-            <li>
-              <i className="pi pi-github text-4xl cursor-pointer hover:text-black focus:text-black transition-colors ease-in-out duration-1000"></i>
-            </li>
-            <li>
-              <i className="pi pi-whatsapp  text-4xl cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></i>
-            </li>
-          </ul>
-          <div className="w-1 h-[150px]  rounded-full bg-active  cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></div>
-        </div>
+        <ul className="flex flex-col gap-5 text-gray-400">
+          <li>
+            <i className="pi pi-linkedin text-4xl cursor-pointer hover:text-blue-600 focus:text-blue-600 transition-colors ease-in-out duration-1000"></i>
+          </li>
+          <li>
+            <i className="pi pi-twitter text-4xl cursor-pointer hover:text-blue-500 focus:text-blue-500 transition-colors ease-in-out duration-1000"></i>
+          </li>
+          <li>
+            <i className="pi pi-github text-4xl cursor-pointer hover:text-black focus:text-black transition-colors ease-in-out duration-1000"></i>
+          </li>
+          <li>
+            <i className="pi pi-whatsapp  text-4xl cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></i>
+          </li>
+        </ul>
+        <div className="w-1 h-[150px]  rounded-full bg-active  cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></div>
+      </div>
     </section>
   );
 }

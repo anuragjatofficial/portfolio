@@ -8,17 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors:{
-        active:'#2bd576'
+      colors: {
+        active: "#2bd576",
+      },
+
+      dropShadow: {
+        active_shadow: ['0 0 1.5rem theme("colors.active")'],
       },
       fontFamily: {
         josefin_sans: ["Josefin Sans", "sans-serif"],
-        libre_serif: ["Libre Baskerville", 'serif']
+        libre_serif: ["Libre Baskerville", "serif"],
       },
-      screens:{
-        xs:'600px',
-        '2xs':'0px',
-      }
+      screens: {
+        xs: "600px",
+        "2xs": "0px",
+      },
     },
   },
   plugins: [],

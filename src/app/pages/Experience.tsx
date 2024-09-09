@@ -2,10 +2,10 @@ import React from "react";
 import { experience } from "../../../info.json";
 
 export default function Experience() {
-  const getDate = (dateString:string):number =>{
-  const date = Date.parse(dateString);
-    return date
-  }
+  const getDate = (dateString: string): number => {
+    const date = new Date(dateString);
+    return date.getFullYear();
+  };
   return (
     <section
       className="bg-[#31333b] flex-col min-h-screen flex justify-around"
@@ -14,7 +14,7 @@ export default function Experience() {
       <h2 className="text-5xl font-semibold font-libre_serif text-active py-10 text-center  max-sm:text-3xl">
         Experience
       </h2>
-      {experience.map((e,index) => (
+      {experience.map((e, index) => (
         <div className="bg-[#31333b] w-full  max-w-[1700px] mx-auto px-24">
           <div className="2xl:px-10 pb-10">
             <div className="flex relative">
@@ -23,15 +23,11 @@ export default function Experience() {
                 <div className="w-1 h-[80%] bg-gray-50"></div>
               </div>
               <div>
-                <h2 className="text-4xl text-gray-50">
-                  {e.designation}
-                </h2>
+                <h2 className="text-4xl text-gray-50">{e.designation}</h2>
                 <h3 className="text-2xl text-gray-50">
                   {e.companyName}, {e.city}
                 </h3>
-                <p className="text-gray-400">
-                  {e.description}
-                </p>
+                <p className="text-gray-400">{e.description}</p>
               </div>
               <div className="absolute inline-flex w-fit -left-[70px]">
                 <div className="bg-gray-900 text-gray-50 px-3 py-1.5 text-2xl -left-16">

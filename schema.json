@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The full name of the individual."
+    },
+    "jobTitles": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "An array of job titles."
+    },
+    "linkedIn": {
+      "type": "string",
+      "description": "LinkedIn profile link."
+    },
+    "twitter": {
+      "type": "string",
+      "description": "Twitter handle or profile link."
+    },
+    "github": {
+      "type": "string",
+      "description": "GitHub username or profile link."
+    },
+    "whatsApp": {
+      "type": "string",
+      "description": "WhatsApp contact link."
+    },
+    "about": {
+      "type": "string",
+      "description": "A short bio or description about the individual."
+    },
+    "techStacks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "imagePath": { "type": "string" }
+        },
+        "required": ["name", "imagePath"]
+      },
+      "description": "List of technologies with their names and image paths."
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "desc": { "type": "string" },
+          "image": { "type": "string" },
+          "tech": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "deployed": { "type": "string" },
+          "github": { "type": "string" }
+        },
+        "required": ["name", "desc", "tech"]
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "designation": { "type": "string" },
+          "companyName": { "type": "string" },
+          "city": { "type": "string" },
+          "joinedDate": { "type": "string" },
+          "description": { "type": "string" }
+        },
+        "required": ["designation", "companyName", "city", "joinedDate"]
+      }
+    },
+    "intrests": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["name", "jobTitles", "techStacks", "projects"]
+}
