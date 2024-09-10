@@ -15,7 +15,10 @@ export default function Experience() {
         Experience
       </h2>
       {experience.map((e, index) => (
-        <div className="bg-[#31333b] w-full  max-w-[1700px] mx-auto px-24">
+        <div
+          className="bg-[#31333b] w-full  max-w-[1700px] mx-auto px-24"
+          key={index}
+        >
           <div className="2xl:px-10 pb-10">
             <div className="flex relative">
               <div className="flex flex-col items-center justify-between px-10">

@@ -1,3 +1,4 @@
+"use client";
 import "primeicons/primeicons.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
