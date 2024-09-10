@@ -4,5 +4,7 @@
       "fileMatch": ["info.json"],
       "url": "./schema.json"
     }
-  ]
+  ],
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.showTabs": "multiple"
 }
