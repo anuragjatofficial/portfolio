@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <section className="h-screen bg-[#3d3e42]" id="home">
-      <div className="font-sans flex justify-between xl:flex-row sm:flex-col-reverse md:flex-col-reverse xs:flex-col-reverse 2xs:flex-col-reverse items-center h-[calc(100vh-80px)]   max-w-[1700px] mx-auto">
+      <div className="font-sans flex justify-between xl:flex-row sm:flex-col-reverse md:flex-col-reverse xs:flex-col-reverse 2xs:flex-col-reverse items-center h-[calc(100vh)]   max-w-[1700px] mx-auto">
         <div className="xl:ml-auto xs:ml-0 flex flex-col">
           <div>
             <h1 className="text-4xl font-normal text-gray-50 py-3 max-sm:text-2xl">

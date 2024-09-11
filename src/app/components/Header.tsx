@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 
-export default function Header() {
-  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+export default function Header({
+  isSidebarVisible,
+  setIsSidebarVisible,
+}: {
+  isSidebarVisible: boolean;
+  setIsSidebarVisible: (visible: boolean) => void;
+}) {
   return (
-    <header className="bg-[#ffffff33] backdrop-blur-3xl flex justify-between py-5 items-center px-5 z-20 sticky w-full top-0 ">
+    <header className="bg-[#ffffff33] backdrop-blur-3xl flex justify-between py-5 items-center px-5 z-20 sticky w-full top-0">
       <div className="text-active font-medium text-2xl">
         {"<"}Anurag{"/>"}
       </div>
@@ -39,16 +44,15 @@ export default function Header() {
           />
           <i className="pi pi-search"></i>
         </div>
-        <div className="flex items-center">
-          <button className="bg-[#31333b] hover:bg-[#31333b5c] focus:outline-none focus:bg-[#31333b5c] transition-colors duration-1000 w-fit h-fit flex rounded-full p-3" onClick={()=>setIsSidebarVisible(true)}>
+        <div className="hidden items-center max-lg:flex">
+          <button
+            className="bg-[#31333b] hover:bg-[#31333b5c] focus:outline-none focus:bg-[#31333b5c] transition-colors duration-1000 w-fit h-fit flex rounded-full p-3"
+            onClick={() => setIsSidebarVisible(true)}
+          >
             <span className="pi text-gray-400 pi-bars text-center text-lg"></span>
           </button>
         </div>
       </div>
-      <Sidebar
-        isVisible={isSidebarVisible}
-        setIsVisible={setIsSidebarVisible}
-      ></Sidebar>
     </header>
   );
 }
