@@ -11,7 +11,7 @@ export default function Header({
   return (
     <header
       className="bg-[#ffffff33] backdrop-blur-3xl flex justify-between py-5 items-center px-5 max-sm:px-2 z-20 sticky w-full top-0"
-      style={{ backdropFilter: "blur(10px)" }}
+      style={{ backdropFilter: "blur(5px)" }}
     >
       <div className="text-active font-medium text-2xl max-sm:text-xl">
         {"<"}Anurag{"/>"}

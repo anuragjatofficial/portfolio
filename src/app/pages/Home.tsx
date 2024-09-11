@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { linkedIn, twitter, whatsApp, github } from "../../../info.json";
 
 export default function Home() {
   return (
@@ -41,16 +42,24 @@ export default function Home() {
       <div className="absolute   right-10 bottom-36 flex flex-col-reverse items-center gap-7 sm:right-5 sm:bottom-5 lg:right-[100px] lg:bottom-[100px]">
         <ul className="flex flex-col gap-5 text-gray-400">
           <li>
-            <i className="pi pi-linkedin text-4xl cursor-pointer hover:text-blue-600 focus:text-blue-600 transition-colors ease-in-out duration-1000"></i>
+            <a href={`https://www.linkedin.com/in/${linkedIn}`} target="_blank">
+              <i className="pi pi-linkedin text-4xl cursor-pointer hover:text-blue-600 focus:text-blue-600 transition-colors ease-in-out duration-1000"></i>
+            </a>
           </li>
           <li>
-            <i className="pi pi-twitter text-4xl cursor-pointer hover:text-blue-500 focus:text-blue-500 transition-colors ease-in-out duration-1000"></i>
+            <a href={`https://x.com/${twitter}`} target="_blank">
+              <i className="pi pi-twitter text-4xl cursor-pointer hover:text-blue-500 focus:text-blue-500 transition-colors ease-in-out duration-1000"></i>
+            </a>
           </li>
           <li>
-            <i className="pi pi-github text-4xl cursor-pointer hover:text-black focus:text-black transition-colors ease-in-out duration-1000"></i>
+            <a href={`https://github.com/${github}`} target="_blank">
+              <i className="pi pi-github text-4xl cursor-pointer hover:text-black focus:text-black transition-colors ease-in-out duration-1000"></i>
+            </a>
           </li>
           <li>
-            <i className="pi pi-whatsapp  text-4xl cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></i>
+            <a href={`https://wa.me/${whatsApp}`} target="_blank">
+              <i className="pi pi-whatsapp  text-4xl cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></i>
+            </a>
           </li>
         </ul>
         <div className="w-1 h-[150px]  rounded-full bg-active  cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></div>
