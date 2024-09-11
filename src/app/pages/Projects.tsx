@@ -13,14 +13,14 @@ export default function Projects() {
 
   return (
     <section className="bg-[#3d3e42] min-h-screen flex" id="projects">
-      <div className="bg-[#3d3e42] min-h-full pt-[80px] h-fit max-w-[1700px] mx-auto px-24">
+      <div className="bg-[#3d3e42] min-h-full pt-[80px] h-fit max-w-[1700px] mx-auto px-24 max-sm:px-0">
         <h2 className="text-5xl font-semibold font-libre_serif text-gray-50 pt-10 text-center  max-sm:text-3xl">
           Projects
         </h2>
         <div className="flex flex-wrap gap-10 justify-center py-10">
           {projects.map((e, i) => (
             <div key={i}>
-              <div className="w-[400px] h-[300px] mx-auto flex relative group focus:border-blue-400 focus:border-8">
+              <div className="w-[400px] max-sm:w-[auto]  h-[300px] mx-auto flex relative group focus:border-blue-400 focus:border-8">
                 <Image
                   width={800}
                   height={800}

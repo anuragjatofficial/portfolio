@@ -4,7 +4,7 @@ import { intrests } from "../../../info.json";
 export default function Contact() {
   return (
     <section className="bg-[#31333b] min-h-screen flex" id="contact">
-      <div className="bg-[#31333b]  h-full  w-full my-auto max-w-[1700px] mx-auto px-24 py-10 flex justify-between">
+      <div className="bg-[#31333b]  h-full  w-full my-auto max-w-[1700px] mx-auto max-sm:px-5 max-md:px-5 px-24 py-10 flex justify-between max-md:flex-col max-md:gap-10 max-sm:flex-col max-sm:gap-10 max-lg:flex-col max-lg:gap-10">
         <div className="w-fit">
           <h2 className="text-5xl font-semibold  text-gray-50 py-5   max-sm:text-3xl">
             Let's discuss <br />
@@ -21,9 +21,9 @@ export default function Contact() {
               </div>
             ))}
           </div>
-        </div>
+        </div>  
 
-        <div className="w-[50%] flex justify-end">
+        <div className="w-[50%] flex justify-end max-sm:w-full max-sm:justify-center max-md:w-full max-md:justify-center max-lg:w-full max-lg:justify-center">
           <form className="w-[70%] ">
             <div className="mb-5">
               <input

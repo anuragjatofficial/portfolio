@@ -9,8 +9,11 @@ export default function Header({
   setIsSidebarVisible: (visible: boolean) => void;
 }) {
   return (
-    <header className="bg-[#ffffff33] backdrop-blur-3xl flex justify-between py-5 items-center px-5 z-20 sticky w-full top-0">
-      <div className="text-active font-medium text-2xl">
+    <header
+      className="bg-[#ffffff33] backdrop-blur-3xl flex justify-between py-5 items-center px-5 max-sm:px-2 z-20 sticky w-full top-0"
+      style={{ backdropFilter: "blur(10px)" }}
+    >
+      <div className="text-active font-medium text-2xl max-sm:text-xl">
         {"<"}Anurag{"/>"}
       </div>
       <div className="text-gray-400 max-lg:hidden">

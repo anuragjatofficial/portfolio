@@ -21,7 +21,7 @@ export default function Home() {
             Contact me
           </button>
         </div>
-        <div className="h-full xl:w-[50%] md:w-[50%] ">
+        <div className="h-full xl:w-[50%] md:w-[50%] flex justify-center items-center sm:w-[80%] w-full max-h-[100vh] max-w-[100vw]">
           <Image
             src="/images/image.png"
             alt=""
@@ -29,8 +29,8 @@ export default function Home() {
             height={1080}
             style={{
               objectFit: "cover",
-              height: "100%",
-              widows: "auto",
+              height: "auto",
+              width: "100%",
               maskImage:
                 "linear-gradient(180deg,rgb(255, 255, 255), rgb(0, 0, 0,0.30), transparent)",
             }}
@@ -38,7 +38,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="absolute  right-10 bottom-10 flex flex-col-reverse items-center gap-7 sm:right-5 sm:bottom-5 lg:right-[100px] lg:bottom-[100px]">
+      <div className="absolute   right-10 bottom-36 flex flex-col-reverse items-center gap-7 sm:right-5 sm:bottom-5 lg:right-[100px] lg:bottom-[100px]">
         <ul className="flex flex-col gap-5 text-gray-400">
           <li>
             <i className="pi pi-linkedin text-4xl cursor-pointer hover:text-blue-600 focus:text-blue-600 transition-colors ease-in-out duration-1000"></i>

@@ -22,15 +22,17 @@ export default function Experience() {
           <div className="2xl:px-10 pb-10">
             <div className="flex relative">
               <div className="flex flex-col items-center justify-between px-10">
-                <div className="w-6 h-6 bg-active rounded-full drop-shadow-[0px_0px_10px_#26a269] my-3"></div>
-                <div className="w-1 h-[80%] bg-gray-50"></div>
+                <div className="w-6 h-6 bg-active rounded-full drop-shadow-[0px_0px_10px_#26a269] my-3 py-3"></div>
+                <div className="w-1 h-[100%] bg-gray-50"></div>
               </div>
               <div>
-                <h2 className="text-4xl text-gray-50">{e.designation}</h2>
-                <h3 className="text-2xl text-gray-50">
+                <h2 className="max-sm:text-xl text-4xl text-gray-50">
+                  {e.designation}
+                </h2>
+                <h3 className="max-sm:text-base text-2xl text-gray-50">
                   {e.companyName}, {e.city}
                 </h3>
-                <p className="text-gray-400">{e.description}</p>
+                <p className="max-sm:text-xs text-gray-400">{e.description}</p>
               </div>
               <div className="absolute inline-flex w-fit -left-[70px]">
                 <div className="bg-gray-900 text-gray-50 px-3 py-1.5 text-2xl -left-16">
