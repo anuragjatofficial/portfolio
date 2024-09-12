@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { linkedIn, twitter, whatsApp, github } from "../../../info.json";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -18,9 +19,13 @@ export default function Home() {
               Full Stack Web Developer & Devops <br /> Engineer
             </h2>
           </div>
-          <button className="px-5 w-fit  rounded-md py-2  ring-offset transition-colors duration-1000 focus:text-white focus:bg-transparent ring-active ring-[3px] my-8 bg-active text-white hover:bg-transparent hover:text-active">
-            Contact me
-          </button>
+          <Link
+            href="https://drive.google.com/file/d/1gouD5FmcHbxHjM8_nZmQyxCtUg4-qG2G/view?usp=sharing"
+            target="_blank"
+            className="px-5 w-fit  rounded-md py-2  ring-offset transition-colors duration-1000 focus:text-white focus:bg-transparent ring-active ring-[3px] my-8 bg-active text-white hover:bg-transparent hover:text-active focus:outline-none"
+          >
+            Download CV
+          </Link>
         </div>
         <div className="h-full xl:w-[50%] md:w-[50%] flex justify-center items-center sm:w-[80%] w-full max-h-[100vh] max-w-[100vw]">
           <Image
@@ -42,22 +47,38 @@ export default function Home() {
       <div className="absolute   right-10 bottom-36 flex flex-col-reverse items-center gap-7 sm:right-5 sm:bottom-5 lg:right-[100px] lg:bottom-[100px]">
         <ul className="flex flex-col gap-5 text-gray-400">
           <li>
-            <a href={`https://www.linkedin.com/in/${linkedIn}`} target="_blank">
+            <a
+              href={`https://www.linkedin.com/in/${linkedIn}`}
+              target="_blank"
+              className="focus:outline-none focus:text-blue-600"
+            >
               <i className="pi pi-linkedin text-4xl cursor-pointer hover:text-blue-600 focus:text-blue-600 transition-colors ease-in-out duration-1000"></i>
             </a>
           </li>
           <li>
-            <a href={`https://x.com/${twitter}`} target="_blank">
+            <a
+              href={`https://x.com/${twitter}`}
+              target="_blank"
+              className="focus:outline-none focus:text-blue-600"
+            >
               <i className="pi pi-twitter text-4xl cursor-pointer hover:text-blue-500 focus:text-blue-500 transition-colors ease-in-out duration-1000"></i>
             </a>
           </li>
           <li>
-            <a href={`https://github.com/${github}`} target="_blank">
+            <a
+              href={`https://github.com/${github}`}
+              target="_blank"
+              className="focus:outline-none focus:text-black"
+            >
               <i className="pi pi-github text-4xl cursor-pointer hover:text-black focus:text-black transition-colors ease-in-out duration-1000"></i>
             </a>
           </li>
           <li>
-            <a href={`https://wa.me/${whatsApp}`} target="_blank">
+            <a
+              href={`https://wa.me/${whatsApp}`}
+              target="_blank"
+              className="focus:outline-none focus:text-active"
+            >
               <i className="pi pi-whatsapp  text-4xl cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></i>
             </a>
           </li>

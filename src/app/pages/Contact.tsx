@@ -1,5 +1,11 @@
 import React from "react";
-import { intrests } from "../../../info.json";
+import {
+  intrests,
+  linkedIn,
+  twitter,
+  whatsApp,
+  github,
+} from "../../../info.json";
 
 export default function Contact() {
   return (
@@ -21,7 +27,7 @@ export default function Contact() {
               </div>
             ))}
           </div>
-        </div>  
+        </div>
 
         <div className="w-[50%] flex justify-end max-sm:w-full max-sm:justify-center max-md:w-full max-md:justify-center max-lg:w-full max-lg:justify-center">
           <form className="w-[70%] ">
@@ -56,16 +62,40 @@ export default function Contact() {
             <div>
               <ul className="flex  w-full justify-center gap-5 py-5 text-gray-400">
                 <li>
-                  <i className="pi pi-linkedin text-4xl cursor-pointer hover:text-blue-600 focus:text-blue-600 transition-colors ease-in-out duration-1000"></i>
+                  <a
+                    href={`https://www.linkedin.com/in/${linkedIn}`}
+                    target="_blank"
+                    className="focus:outline-none focus:text-blue-600"
+                  >
+                    <i className="pi pi-linkedin text-4xl cursor-pointer hover:text-blue-600 focus:text-blue-600 transition-colors ease-in-out duration-1000"></i>
+                  </a>
                 </li>
                 <li>
-                  <i className="pi pi-twitter text-4xl cursor-pointer hover:text-blue-500 focus:text-blue-500 transition-colors ease-in-out duration-1000"></i>
+                  <a
+                    href={`https://x.com/${twitter}`}
+                    target="_blank"
+                    className="focus:outline-none focus:text-blue-600"
+                  >
+                    <i className="pi pi-twitter text-4xl cursor-pointer hover:text-blue-500 focus:text-blue-500 transition-colors ease-in-out duration-1000"></i>
+                  </a>
                 </li>
                 <li>
-                  <i className="pi pi-github text-4xl cursor-pointer hover:text-black focus:text-black transition-colors ease-in-out duration-1000"></i>
+                  <a
+                    href={`https://github.com/${github}`}
+                    target="_blank"
+                    className="focus:outline-none focus:text-black"
+                  >
+                    <i className="pi pi-github text-4xl cursor-pointer hover:text-black focus:text-black transition-colors ease-in-out duration-1000"></i>
+                  </a>
                 </li>
                 <li>
-                  <i className="pi pi-whatsapp  text-4xl cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></i>
+                  <a
+                    href={`https://wa.me/${whatsApp}`}
+                    target="_blank"
+                    className="focus:outline-none focus:text-active"
+                  >
+                    <i className="pi pi-whatsapp  text-4xl cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></i>
+                  </a>
                 </li>
               </ul>
             </div>
