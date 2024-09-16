@@ -15,7 +15,13 @@ interface FormData {
   message: string;
 }
 
-export default function Contact() {
+export default function Contact({
+  theme,
+  setTheme,
+}: {
+  theme: "light" | "dark";
+  setTheme: (theme: "light" | "dark") => void;
+}) {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -24,6 +30,12 @@ export default function Contact() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const toast = useRef<Toast>(null);
 
+  const PRIMARY_TEXT = `${
+    theme === "dark" ? "text-gray-400" : "text-gray-500"
+  }`;
+  const SECONDARY_TEXT = `${
+    theme === "dark" ? "text-gray-50" : "text-gray-950"
+  }`;
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -66,18 +78,29 @@ export default function Contact() {
     clearForm();
   };
   return (
-    <section className="bg-[#31333b] min-h-screen flex" id="contact">
-      <div className="bg-[#31333b]  h-full  w-full my-auto max-w-[1700px] mx-auto max-sm:px-5 max-md:px-5 px-24 py-10 flex justify-between max-md:flex-col max-md:gap-10 max-sm:flex-col max-sm:gap-10 max-lg:flex-col max-lg:gap-10">
+    <section
+      className={`${
+        theme === "dark" ? "bg-secondary" : "bg-secondary-bright"
+      } min-h-screen flex`}
+      id="contact"
+    >
+      <div className="h-full  w-full  my-auto max-w-[1700px] mx-auto max-sm:px-5 max-md:px-5 px-24 py-10 flex justify-between max-md:flex-col max-md:gap-10 max-sm:flex-col max-sm:gap-10 max-lg:flex-col max-lg:gap-10">
         <div className="w-fit">
-          <h2 className="text-5xl font-semibold  text-gray-50 py-5   max-sm:text-3xl">
+          <h2
+            className={`text-5xl font-semibold  ${SECONDARY_TEXT} py-5   max-sm:text-3xl`}
+          >
             Let's discuss <br />
             on something <span className="text-blue-400">cool</span> together
           </h2>
-          <p className="text-lg py-5 text-gray-50">I am interested in ...</p>
+          <p className={`text-lg py-5 ${SECONDARY_TEXT}`}>
+            I am interested in ...
+          </p>
           <div className="flex flex-wrap gap-3">
             {intrests.map((e, index) => (
               <div
-                className="px-2 py-1 rounded-md text-gray-50 bg-[#3d3e42]"
+                className={`px-2 py-1 shadow-sm rounded-md ${SECONDARY_TEXT} ${
+                  theme === "dark" ? "bg-primary" : "bg-primary-bright"
+                }`}
                 key={index}
               >
                 {e}
@@ -95,7 +118,11 @@ export default function Contact() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full focus:outline-none py-1.5 px-3 rounded-md ring-gray-500 focus:ring-1 ring-inset text-gray-50 bg-[#3d3e42] "
+                className={`w-full focus:outline-none py-1.5 px-3 rounded-md ${
+                  theme === "dark" ? "ring-gray-500" : "ring-gray-400"
+                } focus:ring-1 ring-inset ${SECONDARY_TEXT} ${
+                  theme === "dark" ? "bg-primary" : "bg-primary-bright"
+                }`}
                 placeholder="Your name"
               />
             </div>
@@ -106,7 +133,11 @@ export default function Contact() {
                 value={formData.email}
                 required={true}
                 onChange={handleChange}
-                className="w-full focus:outline-none py-1.5 px-3 rounded-md bg-[#3d3e42] text-gray-50 ring-gray-500 focus:ring-1 ring-inset"
+                className={`w-full focus:outline-none py-1.5 px-3 rounded-md ${SECONDARY_TEXT} ${
+                  theme === "dark" ? "bg-primary" : "bg-primary-bright"
+                } ${
+                  theme === "dark" ? "ring-gray-500" : "ring-gray-400"
+                }  focus:ring-1 ring-inset`}
                 placeholder="Your email"
               />
             </div>
@@ -117,7 +148,9 @@ export default function Contact() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="resize-none w-full mb-5 py-1.5 px-3 rounded-md focus:outline-none bg-[#3d3e42] text-gray-50 ring-gray-500 focus:ring-1 ring-inset"
+                className={`resize-none w-full mb-5 py-1.5 px-3 rounded-md focus:outline-none ${
+                  theme === "dark" ? "bg-primary" : "bg-primary-bright"
+                } ${SECONDARY_TEXT} ${theme==='dark'?'ring-gray-500':'ring-gray-400'}  focus:ring-1 ring-inset`}
                 placeholder="Your message"
               ></textarea>
             </div>
@@ -126,7 +159,7 @@ export default function Contact() {
               className="bg-active text-gray-50 gap-3 flex justify-center items-center py-1.5 px-3 rounded-md w-full outline-none hover:opacity-60 focus:opacity-60  "
             >
               {isLoading ? (
-                <BeatLoader color="white" size={'16px'}/>
+                <BeatLoader color="white" size={"16px"} />
               ) : (
                 <>
                   Submit
@@ -135,7 +168,7 @@ export default function Contact() {
               )}
             </button>
             <div>
-              <ul className="flex  w-full justify-center gap-5 py-5 text-gray-400">
+              <ul className={`flex  w-full justify-center gap-5 py-5 ${PRIMARY_TEXT}`}>
                 <li>
                   <a
                     href={`https://www.linkedin.com/in/${linkedIn}`}

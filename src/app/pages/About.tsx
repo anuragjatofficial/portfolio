@@ -6,29 +6,56 @@ interface TechStack {
   name: string;
   imagePath: string;
 }
-export default function About() {
+export default function About({
+  theme,
+  setTheme,
+}: {
+  theme: "light" | "dark";
+  setTheme: (theme: "light" | "dark") => void;
+}) {
+
+  const SECONDARY_TEXT = `${
+    theme === "dark" ? "text-gray-50" : "text-gray-950"
+  }`;
+
   return (
-    <section className="bg-[#31333b] min-h-screen" id="about">
-      <div className="bg-[#31333b]  min-h-full h-fit max-w-[1700px] mx-auto px-24">
+    <section
+      className={`${
+        theme === "dark" ? "bg-secondary" : "bg-secondary-bright"
+      } min-h-screen" id="about`}
+    >
+      <div
+        className={`${
+          theme === "dark" ? "bg-secondary" : "bg-secondary-bright"
+        }  min-h-full h-fit max-w-[1700px] mx-auto px-24`}
+      >
         <div className="pt-[80px]">
-          <h2 className="text-5xl font-semibold font-libre_serif text-gray-50 pt-10 max-sm:text-3xl ">
+          <h2
+            className={`text-5xl font-semibold font-libre_serif ${SECONDARY_TEXT} pt-10 max-sm:text-3xl `}
+          >
             About
           </h2>
           <div className="flex gap-3 my-10">
             <div className="h-1 mt-2  w-[150px]  rounded-full bg-active  cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></div>
 
-            <p className="text-gray-50 text-xl max-sm:text-base ">{about}</p>
+            <p className={`${SECONDARY_TEXT} text-xl max-sm:text-base`}>
+              {about}
+            </p>
           </div>
         </div>
         <div>
-          <h2 className="text-5xl font-semibold font-libre_serif text-gray-50  pt-10 text-center  max-sm:text-3xl">
+          <h2
+            className={`text-5xl font-semibold font-libre_serif ${SECONDARY_TEXT}  pt-10 text-center  max-sm:text-3xl`}
+          >
             My Skills
           </h2>
           <div className="sm:grid md:grid lg:grid xl:grid pt-10 gap-8 max-w-[926px] mx-auto sm:grid-cols-2 md:grid-cols-3 xs:grid-cols-2 2xs:flex 2xs:flex-col 2xs:items-center text-center">
             {techStacks.map((stack: TechStack, index: number) => (
               <div
                 key={index}
-                className="flex flex-col items-center group justify-between rounded-xl shadow-md bg-[#3d3e42] w-fit px-[28px] py-4 hover:-translate-x-1 hover:-translate-y-1 transition-all transform delay-500 duration-300 ease-in-out cursor-pointer "
+                className={`flex flex-col items-center group justify-between rounded-xl shadow-md ${
+                  theme === "dark" ? "bg-primary" : "bg-primary-bright"
+                } w-fit px-[28px] py-4 hover:-translate-x-1 hover:-translate-y-1 transition-all transform delay-500 duration-300 ease-in-out cursor-pointer `}
               >
                 {/* <img src={stack.imagePath} alt={stack.name} /> */}
 
@@ -41,7 +68,7 @@ export default function About() {
                     className="w-36 object-cover"
                   />
                 </div>
-                <p className="text-xl text-gray-50 max-sm:text-base ">
+                <p className={`text-xl ${SECONDARY_TEXT} max-sm:text-base `}>
                   {stack.name}
                 </p>
               </div>
