@@ -13,7 +13,9 @@ export default function Header({
   setTheme: (theme: "light" | "dark") => void;
 }) {
   const changeTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
   };
 
   const PRIMARY_TEXT = `${
