@@ -20,7 +20,12 @@ export default function Page() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
-    prefersDarkMode ? setTheme("dark") : setTheme("light");
+    const savedTheme = localStorage.getItem("theme") as "light" | "dark";
+    savedTheme
+      ? setTheme(savedTheme)
+      : prefersDarkMode
+      ? setTheme("dark")
+      : setTheme("light");
   }, []);
 
   return (
