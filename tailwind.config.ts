@@ -15,9 +15,8 @@ const config: Config = {
         'primary-bright':'#fff',
         'secondary-bright':'#f6f8fa'
       },
-
       dropShadow: {
-        active_shadow: ['0 0 1.5rem theme("colors.active")'],
+        active_shadow: ['0 0 1rem theme("colors.active")'],
       },
       fontFamily: {
         josefin_sans: ["Josefin Sans", "sans-serif"],

@@ -20,7 +20,12 @@ export default function Header({
     theme === "dark" ? "text-gray-400" : "text-gray-500"
   }`;
 
-  const HOVER_TEXT = `${theme === "dark" ? "text-gray-50" : "text-gray-900"}`;
+  const HOVER_TEXT = `${
+    theme === "dark" ? "hover:text-gray-50" : "hover:text-gray-950"
+  }`;
+  const FOCUS_TEXT = `${
+    theme === "dark" ? "focus:text-gray-50" : "focus:text-gray-950"
+  }`;
 
   return (
     <header
@@ -35,11 +40,7 @@ export default function Header({
         <ul className="flex gap-7">
           <li>
             <a
-              className={`hover:${
-                theme === "dark" ? "text-gray-50" : "text-gray-900"
-              } focus:${
-                theme === "dark" ? "text-gray-50" : "text-gray-900"
-              } focus:outline-none cursor-pointer`}
+              className={`${HOVER_TEXT} ${FOCUS_TEXT} focus:outline-none cursor-pointer`}
               href="#home"
             >
               Home
@@ -47,11 +48,7 @@ export default function Header({
           </li>
           <li>
             <a
-              className={`hover:${
-                theme === "dark" ? "text-gray-50" : "text-gray-900"
-              } focus:${
-                theme === "dark" ? "text-gray-50" : "text-gray-900"
-              } focus:outline-none cursor-pointer`}
+              className={`${HOVER_TEXT}  ${FOCUS_TEXT} focus:outline-none cursor-pointer`}
               href="#about"
             >
               About
@@ -59,11 +56,7 @@ export default function Header({
           </li>
           <li>
             <a
-              className={`hover:${
-                theme === "dark" ? "text-gray-50" : "text-gray-900"
-              } focus:${
-                theme === "dark" ? "text-gray-50" : "text-gray-900"
-              } focus:outline-none cursor-pointer`}
+              className={`${HOVER_TEXT} ${FOCUS_TEXT} focus:outline-none cursor-pointer`}
               href="#projects"
             >
               Projects
@@ -71,11 +64,7 @@ export default function Header({
           </li>
           <li>
             <a
-              className={`hover:${
-                theme === "dark" ? "text-gray-50" : "text-gray-900"
-              } focus:${
-                theme === "dark" ? "text-gray-50" : "text-gray-900"
-              } focus:outline-none cursor-pointer`}
+              className={`${HOVER_TEXT} ${FOCUS_TEXT} focus:outline-none cursor-pointer`}
               href="#experience"
             >
               Experience
@@ -83,11 +72,7 @@ export default function Header({
           </li>
           <li>
             <a
-              className={`hover:${
-                theme === "dark" ? "text-gray-50" : "text-gray-900"
-              } focus:${
-                theme === "dark" ? "text-gray-50" : "text-gray-900"
-              } focus:outline-none cursor-pointer`}
+              className={`${HOVER_TEXT} ${FOCUS_TEXT} focus:outline-none cursor-pointer`}
               href="#github"
             >
               Github
@@ -95,11 +80,7 @@ export default function Header({
           </li>
           <li>
             <a
-              className={`hover:${
-                theme === "dark" ? "text-gray-50" : "text-gray-900"
-              } focus:${
-                theme === "dark" ? "text-gray-50" : "text-gray-900"
-              } focus:outline-none cursor-pointer`}
+              className={`${HOVER_TEXT} ${FOCUS_TEXT} focus:outline-none cursor-pointer`}
               href="#contact"
             >
               Contact
@@ -111,7 +92,7 @@ export default function Header({
         <div
           className={`${
             theme === "dark" ? "bg-secondary" : "bg-secondary-bright"
-          } flex justify-between items-center px-3 py-2 rounded-md text-gray-400`}
+          } flex justify-between items-center px-3 py-2 rounded-md ${PRIMARY_TEXT}`}
         >
           <input
             type="text"
@@ -127,7 +108,9 @@ export default function Header({
             } hover:bg-[#31333b5c] focus:outline-none focus:bg-[#31333b5c] transition-colors duration-1000 w-fit h-fit flex rounded-full p-3`}
             onClick={() => setIsSidebarVisible(true)}
           >
-            <span className="pi text-gray-400 pi-bars text-center text-lg"></span>
+            <span
+              className={`pi ${PRIMARY_TEXT} pi-bars text-center text-lg`}
+            ></span>
           </button>
         </div>
         <div className="items-center max-lg:flex">
@@ -138,7 +121,7 @@ export default function Header({
             onClick={changeTheme}
           >
             <span
-              className={`pi text-gray-400 pi-${
+              className={`pi ${PRIMARY_TEXT} pi-${
                 theme === "dark" ? "sun" : "moon"
               } text-center text-lg`}
             ></span>

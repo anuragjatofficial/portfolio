@@ -9,6 +9,14 @@ export default function Home({
   theme: "light" | "dark";
   setTheme: (theme: "light" | "dark") => void;
 }) {
+  const PRIMARY_TEXT = `${
+    theme === "dark" ? "text-gray-400" : "text-gray-500"
+  }`;
+
+  const SECONDARY_TEXT = `${
+    theme === "dark" ? "text-gray-50" : "text-gray-950"
+  }`;
+
   return (
     <section
       className={`h-screen ${
@@ -19,14 +27,16 @@ export default function Home({
       <div className="font-sans flex justify-between xl:flex-row sm:flex-col-reverse md:flex-col-reverse xs:flex-col-reverse 2xs:flex-col-reverse items-center h-[calc(100vh)]   max-w-[1700px] mx-auto">
         <div className="xl:ml-auto xs:ml-0 flex flex-col">
           <div>
-            <h1 className="text-4xl font-normal text-gray-50 py-3 max-sm:text-2xl">
+            <h1
+              className={`text-4xl font-normal ${SECONDARY_TEXT} py-3 max-sm:text-2xl`}
+            >
               I'M
               <span className="text-5xl font-semibold font-libre_serif text-active max-sm:text-3xl">
                 {" "}
                 Anurag Choudhary
               </span>
             </h1>
-            <h2 className="text-2xl text-gray-50 max-sm:text-lg">
+            <h2 className={`text-2xl ${SECONDARY_TEXT} max-sm:text-lg`}>
               Full Stack Web Developer & Devops <br /> Engineer
             </h2>
           </div>
@@ -38,7 +48,7 @@ export default function Home({
             Download CV
           </Link>
         </div>
-        <div className="h-full xl:w-[50%] md:w-[50%] flex justify-center items-center sm:w-[80%] w-full max-h-[100vh] max-w-[100vw]">
+        <div className="z-0 relative bg-transparent overflow-hidden h-full xl:w-[50%] md:w-[50%] flex justify-center items-center sm:w-[80%] w-full max-h-[100vh] max-w-[100vw]">
           <Image
             src="/images/image.png"
             alt=""
@@ -51,12 +61,13 @@ export default function Home({
               maskImage:
                 "linear-gradient(180deg,rgb(255, 255, 255), rgb(0, 0, 0,0.30), transparent)",
             }}
-            className="md:pt-32 sm:pt-16 lg:pt-44 xl:pt-0 2xl:pt-0  grayscale mix-blend-overlay drop-shadow-active_shadow md:w-[500px] sm:w-[400px] xs:w-[400px] 2xs:w-[400px] lg:w-[800px] xl:w[800px] 2xl:[800px]"
+            className="md:pt-32 sm:pt-16 lg:pt-44 xl:pt-0 2xl:pt-0  grayscale-[80%] drop-shadow-active_shadow md:w-[500px] sm:w-[400px] xs:w-[400px] 2xs:w-[400px] lg:w-[800px] xl:w[800px] 2xl:[800px]"
           />
+          <div className="absolute bottom-0 w-full h-full bg-transparent  "></div>
         </div>
       </div>
       <div className="absolute   right-10 bottom-36 flex flex-col-reverse items-center gap-7 sm:right-5 sm:bottom-5 lg:right-[100px] lg:bottom-[100px]">
-        <ul className="flex flex-col gap-5 text-gray-400">
+        <ul className={`flex flex-col gap-5 ${PRIMARY_TEXT}`}>
           <li>
             <a
               href={`https://www.linkedin.com/in/${linkedIn}`}

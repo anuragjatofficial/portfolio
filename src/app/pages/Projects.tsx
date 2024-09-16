@@ -14,6 +14,10 @@ export default function Projects({
     return `#${randomColor.padStart(6, "0")}`;
   };
 
+  const SECONDARY_TEXT = `${
+    theme === "dark" ? "text-gray-50" : "text-gray-950"
+  }`;
+
   return (
     <section
       className={`${
@@ -26,7 +30,9 @@ export default function Projects({
           theme === "dark" ? "bg-primary" : "bg-primary-bright"
         }  min-h-full pt-[80px] h-fit max-w-[1700px] mx-auto px-24 max-sm:px-0`}
       >
-        <h2 className="text-5xl font-semibold font-libre_serif text-gray-50 pt-10 text-center  max-sm:text-3xl">
+        <h2
+          className={`text-5xl font-semibold font-libre_serif ${SECONDARY_TEXT} pt-10 text-center  max-sm:text-3xl`}
+        >
           Projects
         </h2>
         <div className="flex flex-wrap gap-10 justify-center py-10">

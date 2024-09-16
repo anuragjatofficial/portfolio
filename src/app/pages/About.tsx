@@ -13,6 +13,11 @@ export default function About({
   theme: "light" | "dark";
   setTheme: (theme: "light" | "dark") => void;
 }) {
+
+  const SECONDARY_TEXT = `${
+    theme === "dark" ? "text-gray-50" : "text-gray-950"
+  }`;
+
   return (
     <section
       className={`${
@@ -25,17 +30,23 @@ export default function About({
         }  min-h-full h-fit max-w-[1700px] mx-auto px-24`}
       >
         <div className="pt-[80px]">
-          <h2 className="text-5xl font-semibold font-libre_serif text-gray-50 pt-10 max-sm:text-3xl ">
+          <h2
+            className={`text-5xl font-semibold font-libre_serif ${SECONDARY_TEXT} pt-10 max-sm:text-3xl `}
+          >
             About
           </h2>
           <div className="flex gap-3 my-10">
             <div className="h-1 mt-2  w-[150px]  rounded-full bg-active  cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></div>
 
-            <p className="text-gray-50 text-xl max-sm:text-base ">{about}</p>
+            <p className={`${SECONDARY_TEXT} text-xl max-sm:text-base`}>
+              {about}
+            </p>
           </div>
         </div>
         <div>
-          <h2 className="text-5xl font-semibold font-libre_serif text-gray-50  pt-10 text-center  max-sm:text-3xl">
+          <h2
+            className={`text-5xl font-semibold font-libre_serif ${SECONDARY_TEXT}  pt-10 text-center  max-sm:text-3xl`}
+          >
             My Skills
           </h2>
           <div className="sm:grid md:grid lg:grid xl:grid pt-10 gap-8 max-w-[926px] mx-auto sm:grid-cols-2 md:grid-cols-3 xs:grid-cols-2 2xs:flex 2xs:flex-col 2xs:items-center text-center">
@@ -57,7 +68,7 @@ export default function About({
                     className="w-36 object-cover"
                   />
                 </div>
-                <p className="text-xl text-gray-50 max-sm:text-base ">
+                <p className={`text-xl ${SECONDARY_TEXT} max-sm:text-base `}>
                   {stack.name}
                 </p>
               </div>
