@@ -10,30 +10,45 @@ import Github from "./pages/Github";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Sidebar from "./components/Sidebar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useMediaQuery } from "@react-hook/media-query";
 import { PrimeReactProvider } from "primereact/api";
 
 export default function Page() {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  useEffect(() => {
+    prefersDarkMode ? setTheme("dark") : setTheme("light");
+  }, []);
 
   return (
     <PrimeReactProvider>
-      <main className="font-josefin_sans bg-[#3d3e42] ">
+      <main
+        className={`font-josefin_sans ${
+          theme === "dark" ? "bg-primary" : "bg-primary-bright"
+        } `}
+      >
         <Header
           isSidebarVisible={isSidebarVisible}
           setIsSidebarVisible={setIsSidebarVisible}
+          theme={theme}
+          setTheme={setTheme}
         />
         <Sidebar
           isVisible={isSidebarVisible}
           setIsVisible={setIsSidebarVisible}
+          theme={theme}
+          setTheme={setTheme}
         ></Sidebar>
-        <Home />
-        <About />
-        <Projects />
-        <Experience />
-        <Github />
-        <Contact />
-        <Footer />
+        <Home theme={theme} setTheme={setTheme} />
+        <About theme={theme} setTheme={setTheme} />
+        <Projects theme={theme} setTheme={setTheme} />
+        <Experience theme={theme} setTheme={setTheme} />
+        <Github theme={theme} setTheme={setTheme} />
+        <Contact theme={theme} setTheme={setTheme} />
+        <Footer theme={theme} setTheme={setTheme} />
       </main>
     </PrimeReactProvider>
   );

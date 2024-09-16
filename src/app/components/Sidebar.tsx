@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from "react";
 interface SidebarProps {
   isVisible: boolean;
   setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
+  theme: "light" | "dark";
+  setTheme: React.Dispatch<React.SetStateAction<"light" | "dark">>;
 }
 
 export default function Sidebar(sidebarProps: SidebarProps) {
@@ -12,7 +14,7 @@ export default function Sidebar(sidebarProps: SidebarProps) {
     { href: "#projects", label: "Projects", icon: "pi-code" },
     { href: "#experience", label: "Experience", icon: "pi-briefcase" },
     { href: "#github", label: "Github", icon: "pi-github" },
-    { href: "#contact", label: "Contact", icon: "pi-user" }
+    { href: "#contact", label: "Contact", icon: "pi-user" },
   ];
 
   const sidebarRef = useRef<HTMLDivElement>(null);
@@ -20,7 +22,10 @@ export default function Sidebar(sidebarProps: SidebarProps) {
   useEffect(() => {
     // Function to close the sidebar if click is outside
     const handleClickOutside = (event: MouseEvent) => {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target as Node)
+      ) {
         sidebarProps.setIsVisible(false);
       }
     };
@@ -51,8 +56,12 @@ export default function Sidebar(sidebarProps: SidebarProps) {
   return (
     <aside
       ref={sidebarRef} // Attach ref to the sidebar
-      className={`w-[300px] px-6 h-screen bg-[#1c1b23] fixed top-0 right-0 rounded-tl-lg rounded-bl-lg ${
-        sidebarProps.isVisible ? "translate-x-0" : " translate-x-[100%] duration-500"
+      className={`w-[300px] px-6 h-screen ${
+        sidebarProps.theme === "dark" ? "bg-[#1c1b23]" : "bg-secondary-bright"
+      } fixed top-0 right-0 rounded-tl-lg rounded-bl-lg ${
+        sidebarProps.isVisible
+          ? "translate-x-0"
+          : " translate-x-[100%] duration-500"
       } transition-transform duration-500 z-30`}
     >
       <div className="flex gap-2 pl-3 my-5 items-center">
@@ -65,7 +74,7 @@ export default function Sidebar(sidebarProps: SidebarProps) {
           <span className="pi text-[#1c1b23] font-semibold pi-times text-center text-2xs"></span>
         </div>
       </div>
-      <div className="bg-[#1c1b23] rounded-md h-5/6">
+      <div className="rounded-md h-5/6">
         <ul className="text-[#737086] text-sm p-2">
           {menuItems.map((item) => (
             <li key={item.href}>

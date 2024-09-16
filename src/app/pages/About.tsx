@@ -6,10 +6,24 @@ interface TechStack {
   name: string;
   imagePath: string;
 }
-export default function About() {
+export default function About({
+  theme,
+  setTheme,
+}: {
+  theme: "light" | "dark";
+  setTheme: (theme: "light" | "dark") => void;
+}) {
   return (
-    <section className="bg-[#31333b] min-h-screen" id="about">
-      <div className="bg-[#31333b]  min-h-full h-fit max-w-[1700px] mx-auto px-24">
+    <section
+      className={`${
+        theme === "dark" ? "bg-secondary" : "bg-secondary-bright"
+      } min-h-screen" id="about`}
+    >
+      <div
+        className={`${
+          theme === "dark" ? "bg-secondary" : "bg-secondary-bright"
+        }  min-h-full h-fit max-w-[1700px] mx-auto px-24`}
+      >
         <div className="pt-[80px]">
           <h2 className="text-5xl font-semibold font-libre_serif text-gray-50 pt-10 max-sm:text-3xl ">
             About
@@ -28,7 +42,9 @@ export default function About() {
             {techStacks.map((stack: TechStack, index: number) => (
               <div
                 key={index}
-                className="flex flex-col items-center group justify-between rounded-xl shadow-md bg-[#3d3e42] w-fit px-[28px] py-4 hover:-translate-x-1 hover:-translate-y-1 transition-all transform delay-500 duration-300 ease-in-out cursor-pointer "
+                className={`flex flex-col items-center group justify-between rounded-xl shadow-md ${
+                  theme === "dark" ? "bg-primary" : "bg-primary-bright"
+                } w-fit px-[28px] py-4 hover:-translate-x-1 hover:-translate-y-1 transition-all transform delay-500 duration-300 ease-in-out cursor-pointer `}
               >
                 {/* <img src={stack.imagePath} alt={stack.name} /> */}
 

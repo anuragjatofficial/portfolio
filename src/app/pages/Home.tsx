@@ -2,9 +2,20 @@ import Image from "next/image";
 import { linkedIn, twitter, whatsApp, github } from "../../../info.json";
 import Link from "next/link";
 
-export default function Home() {
+export default function Home({
+  theme,
+  setTheme,
+}: {
+  theme: "light" | "dark";
+  setTheme: (theme: "light" | "dark") => void;
+}) {
   return (
-    <section className="h-screen bg-[#3d3e42]" id="home">
+    <section
+      className={`h-screen ${
+        theme === "dark" ? "bg-primary" : "bg-primary-bright"
+      }`}
+      id="home"
+    >
       <div className="font-sans flex justify-between xl:flex-row sm:flex-col-reverse md:flex-col-reverse xs:flex-col-reverse 2xs:flex-col-reverse items-center h-[calc(100vh)]   max-w-[1700px] mx-auto">
         <div className="xl:ml-auto xs:ml-0 flex flex-col">
           <div>

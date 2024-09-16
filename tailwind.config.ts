@@ -10,6 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         active: "#2bd576",
+        primary:'#3d3e42',
+        secondary:'#31333b',
+        'primary-bright':'#fff',
+        'secondary-bright':'#f6f8fa'
       },
 
       dropShadow: {

@@ -1,14 +1,22 @@
 import React from "react";
 import { experience } from "../../../info.json";
 
-export default function Experience() {
+export default function Experience({
+  theme,
+  setTheme,
+}: {
+  theme: "light" | "dark";
+  setTheme: (theme: "light" | "dark") => void;
+}) {
   const getDate = (dateString: string): number => {
     const date = new Date(dateString);
     return date.getFullYear();
   };
   return (
     <section
-      className="bg-[#31333b] flex-col min-h-screen flex justify-around"
+      className={`${
+        theme === "dark" ? "bg-secondary" : "bg-secondary-bright"
+      } flex-col min-h-screen flex justify-around`}
       id="experience"
     >
       <h2 className="text-5xl font-semibold font-libre_serif text-active py-10 text-center  max-sm:text-3xl">
@@ -16,7 +24,7 @@ export default function Experience() {
       </h2>
       {experience.map((e, index) => (
         <div
-          className="bg-[#31333b] w-full  max-w-[1700px] mx-auto px-24"
+          className="w-full  max-w-[1700px] mx-auto px-24"
           key={index}
         >
           <div className="2xl:px-10 pb-10">

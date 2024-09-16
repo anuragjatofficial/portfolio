@@ -1,10 +1,25 @@
 import React from "react";
 import { github } from "../../../info.json";
 
-export default function Github() {
+export default function Github({
+  theme,
+  setTheme,
+}: {
+  theme: "light" | "dark";
+  setTheme: (theme: "light" | "dark") => void;
+}) {
   return (
-    <section className="bg-[#3d3e42] min-h-screen " id="github">
-      <div className="bg-[#3d3e42]  h-full flex flex-col justify-around max-w-[1700px] mx-auto max-sm:px-2 px-24">
+    <section
+      className={`${
+        theme === "dark" ? "bg-primary" : "bg-primary-bright"
+      }min-h-screen `}
+      id="github"
+    >
+      <div
+        className={`${
+          theme === "dark" ? "bg-primary" : "bg-primary-bright"
+        }  h-full flex flex-col justify-around max-w-[1700px] mx-auto max-sm:px-2 px-24`}
+      >
         <h2 className="text-5xl font-semibold font-libre_serif text-active py-10 text-center  max-sm:text-3xl">
           Github Stats
         </h2>
