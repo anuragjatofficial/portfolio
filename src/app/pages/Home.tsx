@@ -19,7 +19,7 @@ export default function Home({
 
   return (
     <section
-      className={`h-screen ${
+      className={`${
         theme === "dark" ? "bg-primary" : "bg-primary-bright"
       }`}
       id="home"
