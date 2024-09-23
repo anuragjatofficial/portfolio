@@ -5,6 +5,7 @@ import {
   twitter,
   whatsApp,
   github,
+  email,
 } from "../../../info.json";
 import { BeatLoader } from "react-spinners";
 import { Toast } from "primereact/toast";
@@ -36,6 +37,14 @@ export default function Contact({
   const SECONDARY_TEXT = `${
     theme === "dark" ? "text-gray-50" : "text-gray-950"
   }`;
+
+  const HOVER_TEXT = `${
+    theme === "dark" ? "hover:text-gray-50" : "hover:text-gray-950"
+  }`;
+  const FOCUS_TEXT = `${
+    theme === "dark" ? "focus:text-gray-50" : "focus:text-gray-950"
+  }`;
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -77,11 +86,33 @@ export default function Contact({
     }
     clearForm();
   };
+  const handleEmailCopy = () => {
+    // Copy the email to the clipboard
+    navigator.clipboard
+      .writeText(email)
+      .then(() => {
+        // Show a success message via toast
+        toast.current?.show({
+          severity: "success",
+          summary: "Email Copied!",
+          detail: "Email copied successfully!",
+        });
+      })
+      .catch((err) => {
+        // Handle error if copying fails
+        toast.current?.show({
+          severity: "error",
+          summary: "Copy Failed",
+          detail: "Failed to copy email. Please try again.",
+        });
+      });
+  };
+
   return (
     <section
       className={`${
         theme === "dark" ? "bg-secondary" : "bg-secondary-bright"
-      } min-h-screen flex`}
+      } min-h-screen flex relative`}
       id="contact"
     >
       <div className="h-full  w-full  my-auto max-w-[1700px] mx-auto max-sm:px-5 max-md:px-5 px-24 py-10 flex justify-between max-md:flex-col max-md:gap-10 max-sm:flex-col max-sm:gap-10 max-lg:flex-col max-lg:gap-10">
@@ -150,13 +181,18 @@ export default function Contact({
                 onChange={handleChange}
                 className={`resize-none w-full mb-5 py-1.5 px-3 rounded-md focus:outline-none ${
                   theme === "dark" ? "bg-primary" : "bg-primary-bright"
-                } ${SECONDARY_TEXT} ${theme==='dark'?'ring-gray-500':'ring-gray-400'}  focus:ring-1 ring-inset`}
+                } ${SECONDARY_TEXT} ${
+                  theme === "dark" ? "ring-gray-500" : "ring-gray-400"
+                }  focus:ring-1 ring-inset`}
                 placeholder="Your message"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="bg-active text-gray-50 gap-3 flex justify-center items-center py-1.5 px-3 rounded-md w-full outline-none hover:opacity-60 focus:opacity-60  "
+              disabled={isLoading}
+              className={`${
+                isLoading ? "cursor-wait" : "cursor-pointer"
+              } bg-active text-gray-50 gap-3 flex justify-center items-center py-1.5 px-3 rounded-md w-full outline-none hover:opacity-60 focus:opacity-60  `}
             >
               {isLoading ? (
                 <BeatLoader color="white" size={"16px"} />
@@ -168,7 +204,9 @@ export default function Contact({
               )}
             </button>
             <div>
-              <ul className={`flex  w-full justify-center gap-5 py-5 ${PRIMARY_TEXT}`}>
+              <ul
+                className={`flex  w-full justify-center gap-5 py-5 ${PRIMARY_TEXT}`}
+              >
                 <li>
                   <a
                     href={`https://www.linkedin.com/in/${linkedIn}`}
@@ -210,7 +248,23 @@ export default function Contact({
           </form>
         </div>
       </div>
-      <Toast ref={toast} />
+      <Toast
+        ref={toast}
+        className="!top-[10px] !right-2 "
+        style={{ maxWidth: "calc(100vw - 40px) ", top: "10px", right: "0px" }}
+      />
+      <div
+        className={`absolute bottom-0  w-fit transform-translate translate-x-[-50%] left-[50%]  flex justify-center items-center gap-2 my-3 ${PRIMARY_TEXT} px-3 py-1 shadow-sm rounded-md ${SECONDARY_TEXT} ${
+          theme === "dark" ? "bg-primary" : "bg-primary-bright"
+        }`}
+      >
+        <i className="pi pi-envelope"></i>
+        <p>{email}</p>
+        <i
+          className={`pi pi-clone p-2 cursor-pointer hover:bg-gray-400 bg-opacity-75 transition-all duration-500 focus:bg-gray-400 rounded-full ${HOVER_TEXT} ${FOCUS_TEXT}`}
+          onClick={handleEmailCopy}
+        ></i>
+      </div>
     </section>
   );
 }

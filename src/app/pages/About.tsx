@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { techStacks, about } from "../../../info.json";
+const { techStacks, about } = require( "../../../info.json");
 
 interface TechStack {
   name: string;
