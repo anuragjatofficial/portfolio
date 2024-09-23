@@ -37,7 +37,7 @@ export default function About({
             About
           </h2>
           <div className="flex gap-3 my-10">
-            <div className="h-1 mt-2  w-full md:w-[150px]  rounded-full bg-active  cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></div>
+            <div className="h-0.5 md:h-1 mt-2  w-full md:w-[150px]  rounded-full bg-active  cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></div>
 
             <p className={`${SECONDARY_TEXT} text-xl max-sm:text-base`}>
               {about}

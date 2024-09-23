@@ -42,7 +42,7 @@ export const ProjectCard: React.FC<CardProps> = ({ project }) => {
 
   return (
     <div
-      className="w-[400px] px-2 md:px-0 max-sm:w-[auto] h-[300px] mx-auto flex relative group outline-0"
+      className="w-[400px] mx-2 md:px-0 max-sm:w-[auto] h-[300px] md:mx-auto flex relative group outline-0"
       tabIndex={0}
       onFocus={handleFocus}
       onBlur={handleBlur}
