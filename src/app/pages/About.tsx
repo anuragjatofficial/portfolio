@@ -22,12 +22,13 @@ export default function About({
     <section
       className={`${
         theme === "dark" ? "bg-secondary" : "bg-secondary-bright"
-      } min-h-screen" id="about`}
+      }`}
+      id="about"
     >
       <div
         className={`${
           theme === "dark" ? "bg-secondary" : "bg-secondary-bright"
-        }  min-h-full h-fit max-w-[1700px] mx-auto px-24`}
+        }  min-h-full h-fit max-w-[1700px] mx-auto md:px-24 px-2`}
       >
         <div className="pt-[80px]">
           <h2
@@ -36,7 +37,7 @@ export default function About({
             About
           </h2>
           <div className="flex gap-3 my-10">
-            <div className="h-1 mt-2  w-[150px]  rounded-full bg-active  cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></div>
+            <div className="h-0.5 md:h-1 mt-2  w-full md:w-[150px]  rounded-full bg-active  cursor-pointer hover:text-active focus:text-active transition-colors ease-in-out duration-1000"></div>
 
             <p className={`${SECONDARY_TEXT} text-xl max-sm:text-base`}>
               {about}
@@ -49,7 +50,7 @@ export default function About({
           >
             My Skills
           </h2>
-          <div className="sm:grid md:grid lg:grid xl:grid pt-10 gap-8 max-w-[926px] mx-auto sm:grid-cols-2 md:grid-cols-3 xs:grid-cols-2 2xs:flex 2xs:flex-col 2xs:items-center text-center">
+          <div className="sm:grid md:grid lg:grid justify-items-center xl:grid pt-10 gap-8 max-w-[926px] mx-auto sm:grid-cols-2 md:grid-cols-3 xs:grid-cols-2 2xs:flex 2xs:flex-col 2xs:items-center text-center">
             {techStacks.map((stack: TechStack, index: number) => (
               <div
                 key={index}
@@ -75,7 +76,7 @@ export default function About({
             ))}
           </div>
         </div>
-        <div className="gap-10 flex-col flex ml-auto py-10 max-sm:gap-8 ">
+        <div className="gap-10 flex-col flex ml-auto py-10 max-sm:gap-8 mr-5 md:mr-0">
           <div className="flex gap-10 items-center justify-end max-sm:gap-8">
             <div className="rounded-full w-3 h-3 bg-active max-sm:w-1 max-sm:h-1"></div>
             <div className="rounded-full w-4 h-4 bg-active max-sm:w-2 max-sm:h-2"></div>

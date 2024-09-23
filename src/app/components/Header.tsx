@@ -91,7 +91,7 @@ export default function Header({
         </ul>
       </div>
       <div className="flex gap-5">
-        <div
+        {/* <div
           className={`${
             theme === "dark" ? "bg-secondary" : "bg-secondary-bright"
           } flex justify-between items-center px-3 py-2 rounded-md ${PRIMARY_TEXT}`}
@@ -102,7 +102,7 @@ export default function Header({
             className="focus:outline-none bg-inherit"
           />
           <i className="pi pi-search"></i>
-        </div>
+        </div> */}
         <div className="hidden items-center max-lg:flex">
           <button
             className={`${
