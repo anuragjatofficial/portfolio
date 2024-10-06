@@ -1,12 +1,5 @@
 import React, { ChangeEvent, FormEvent, useRef, useState } from "react";
-import {
-  intrests,
-  linkedIn,
-  twitter,
-  whatsApp,
-  github,
-  email,
-} from "../../../info.json";
+import info from "../../../info.json";
 import { BeatLoader } from "react-spinners";
 import { Toast } from "primereact/toast";
 
@@ -89,7 +82,7 @@ export default function Contact({
   const handleEmailCopy = () => {
     // Copy the email to the clipboard
     navigator.clipboard
-      .writeText(email)
+      .writeText(info.email)
       .then(() => {
         // Show a success message via toast
         toast.current?.show({
@@ -127,7 +120,7 @@ export default function Contact({
             I am interested in ...
           </p>
           <div className="flex flex-wrap gap-3">
-            {intrests.map((e, index) => (
+            {info.intrests.map((e, index) => (
               <div
                 className={`px-2 py-1 shadow-sm rounded-md ${SECONDARY_TEXT} ${
                   theme === "dark" ? "bg-primary" : "bg-primary-bright"
@@ -209,7 +202,7 @@ export default function Contact({
               >
                 <li>
                   <a
-                    href={`https://www.linkedin.com/in/${linkedIn}`}
+                    href={`https://www.linkedin.com/in/${info.linkedIn}`}
                     target="_blank"
                     className="focus:outline-none focus:text-blue-600"
                   >
@@ -218,7 +211,7 @@ export default function Contact({
                 </li>
                 <li>
                   <a
-                    href={`https://x.com/${twitter}`}
+                    href={`https://x.com/${info.twitter}`}
                     target="_blank"
                     className="focus:outline-none focus:text-blue-600"
                   >
@@ -227,7 +220,7 @@ export default function Contact({
                 </li>
                 <li>
                   <a
-                    href={`https://github.com/${github}`}
+                    href={`https://github.com/${info.github}`}
                     target="_blank"
                     className="focus:outline-none focus:text-black"
                   >
@@ -236,7 +229,7 @@ export default function Contact({
                 </li>
                 <li>
                   <a
-                    href={`https://wa.me/${whatsApp}`}
+                    href={`https://wa.me/${info.whatsApp}`}
                     target="_blank"
                     className="focus:outline-none focus:text-active"
                   >
@@ -250,8 +243,7 @@ export default function Contact({
       </div>
       <Toast
         ref={toast}
-        className="!top-[10px] !right-2 "
-        style={{ maxWidth: "calc(100vw - 40px) ", top: "10px", right: "0px" }}
+        className="!top-[10px] !right-2 max-sm:text-sm max-sm:w-fit"
       />
       <div
         className={`absolute bottom-0  w-fit transform-translate translate-x-[-50%] left-[50%]  flex justify-center items-center gap-2 my-3 ${PRIMARY_TEXT} px-3 py-1 shadow-sm rounded-md ${SECONDARY_TEXT} ${
@@ -259,7 +251,7 @@ export default function Contact({
         }`}
       >
         <i className="pi pi-envelope"></i>
-        <p>{email}</p>
+        <p>{info.email}</p>
         <i
           className={`pi pi-clone p-2 cursor-pointer hover:bg-gray-400 bg-opacity-75 transition-all duration-500 focus:bg-gray-400 rounded-full ${HOVER_TEXT} ${FOCUS_TEXT}`}
           onClick={handleEmailCopy}

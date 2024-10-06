@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { linkedIn, twitter, whatsApp, github } from "../../../info.json";
+import info from "../../../info.json";
 import Link from "next/link";
 
 export default function Home({
@@ -70,7 +70,7 @@ export default function Home({
         <ul className={`flex flex-col gap-5 ${PRIMARY_TEXT}`}>
           <li>
             <a
-              href={`https://www.linkedin.com/in/${linkedIn}`}
+              href={`https://www.linkedin.com/in/${info.linkedIn}`}
               target="_blank"
               className="focus:outline-none focus:text-blue-600"
             >
@@ -79,7 +79,7 @@ export default function Home({
           </li>
           <li>
             <a
-              href={`https://x.com/${twitter}`}
+              href={`https://x.com/${info.twitter}`}
               target="_blank"
               className="focus:outline-none focus:text-blue-600"
             >
@@ -88,7 +88,7 @@ export default function Home({
           </li>
           <li>
             <a
-              href={`https://github.com/${github}`}
+              href={`https://github.com/${info.github}`}
               target="_blank"
               className="focus:outline-none focus:text-black"
             >
@@ -97,7 +97,7 @@ export default function Home({
           </li>
           <li>
             <a
-              href={`https://wa.me/${whatsApp}`}
+              href={`https://wa.me/${info.whatsApp}`}
               target="_blank"
               className="focus:outline-none focus:text-active"
             >

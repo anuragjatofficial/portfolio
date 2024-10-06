@@ -1,5 +1,5 @@
 import React from "react";
-import { projects } from "../../../info.json";
+import info from "../../../info.json";
 import { ProjectCard } from "../components/ProjectCard";
 
 export default function Projects({
@@ -36,7 +36,7 @@ export default function Projects({
           Projects
         </h2>
         <div className="flex flex-wrap gap-10 justify-center py-10">
-          {projects.map((project, i: number) => (
+          {info.projects.map((project, i: number) => (
             <ProjectCard key={i} project={project} />
           ))}
         </div>

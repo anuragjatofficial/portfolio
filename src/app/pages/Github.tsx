@@ -1,5 +1,5 @@
 import React from "react";
-import { github } from "../../../info.json";
+import info from "../../../info.json";
 
 export default function Github({
   theme,
@@ -27,7 +27,7 @@ export default function Github({
           <div className="flex w-fit flex-col items-center gap-12">
             <div className="w-full flex ">
               <img
-                src={`https://ssr-contributions-svg.vercel.app/_/${github}?format=svg&weeks=50&theme=native&widget_size=medium`}
+                src={`https://ssr-contributions-svg.vercel.app/_/${info.github}?format=svg&weeks=50&theme=native&widget_size=medium`}
                 alt="github stats"
                 className="w-full"
               />
@@ -36,20 +36,20 @@ export default function Github({
               <div className="drop-shadow-[0px_0px_5px_#2bd576] w-full">
                 <img
                   className="object-cover full"
-                  src={`https://github-readme-streak-stats.herokuapp.com/?user=${github}&theme=dark&theme=default_repocard&title_color=%27#ffff'`}
+                  src={`https://github-readme-streak-stats.herokuapp.com/?user=${info.github}&theme=dark&theme=default_repocard&title_color=%27#ffff'`}
                   alt=""
                 />
               </div>
               <div className="drop-shadow-[0px_0px_5px_#2bd576] w-full">
                 <img
-                  src={`https://github-readme-stats.vercel.app/api/top-langs?username=${github}&show_icons=true&locale=en&layout=compact`}
+                  src={`https://github-readme-stats.vercel.app/api/top-langs?username=${info.github}&show_icons=true&locale=en&layout=compact`}
                   alt=""
                   className="object-cover w-full"
                 />
               </div>
               <div className="drop-shadow-[0px_0px_5px_#2bd576] w-full">
                 <img
-                  src={`https://github-readme-stats.vercel.app/api?username=${github}&show_icons=true&default_repocard`}
+                  src={`https://github-readme-stats.vercel.app/api?username=${info.github}&show_icons=true&default_repocard`}
                   alt=""
                   className="object-cover w-full"
                 />

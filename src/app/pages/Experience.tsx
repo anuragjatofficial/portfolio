@@ -1,5 +1,7 @@
 import React from "react";
-import { experience } from "../../../info.json";
+import info from "../../../info.json";
+
+const experience = info.experience;
 
 export default function Experience({
   theme,
@@ -29,7 +31,10 @@ export default function Experience({
         Experience
       </h2>
       {experience.map((e, index) => (
-        <div className="w-full  max-w-[1700px] mx-auto md:px-24 px-2" key={index}>
+        <div
+          className="w-full  max-w-[1700px] mx-auto md:px-24 px-2"
+          key={index}
+        >
           <div className="2xl:px-10 pb-10">
             <div className="flex relative md:pl-0 pl-[50px]">
               <div className="flex flex-col items-center justify-between px-5 md:px-10">
